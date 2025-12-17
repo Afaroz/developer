@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Website Developer | Modern Web Solutions</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Royal WebDev</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <h1>I Build <span>Modern</span> Websites</h1>
+    <p>Fast, responsive and conversion-focused websites for businesses & brands.</p>
+    <a href="#contact" class="btn">Get Your Website</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">My Services</h2>
+    <div class="services">
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h3>Website Development</h3>
+        <p>Clean, fast and SEO-ready websites.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-palette"></i>
+        <h3>UI / UX Design</h3>
+        <p>Modern layouts with smooth experience.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Responsive Design</h3>
+        <p>Perfect on mobile, tablet & desktop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="portfolio">
+  <div class="container">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio">
+      <!-- Project One with Screenshot -->
+      <div class="project">
+        <img src="Screenshot (158).png" alt="Project One Screenshot">
+      </div>
+
+      <!-- Project Two with Screenshot -->
+      <div class="project">
+        <img src="Screenshot (159).png" alt="Project Two Screenshot">
+      </div>
+
+      <!-- Project Three - Coming Soon -->
+      <div class="project coming-soon">
+        Project Three - Coming Soon
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const whatsappNumber = "7387304707"; // your WhatsApp number
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); // prevent form from submitting normally
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(name === "" || email === "" || message === "") return;
+
+    // Construct the WhatsApp message
+    const text = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Message:* ${message}`;
+    
+    // Open WhatsApp with the pre-filled message
+    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+    window.open(url, '_blank');
+    
+    // Optional: reset form after opening WhatsApp
+    form.reset();
+  });
+</script>
+
+<footer>
+  <p>© 2025 Royal Website Developer. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/1234567890" target="_blank" class="floating-whatsapp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
