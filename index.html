@@ -1,19 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Royal Website Developer | Modern Web Solutions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Website Developer</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
+<style>
+
+/* ===== GLOBAL RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+html,body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+  width:100%;
+  padding:0 16px;
+  margin:auto;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:#111;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0;
+}
+
+.logo{
+  color:#fff;
+  font-weight:700;
+  font-size:18px;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:12px;
+}
+
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(135deg,#000,#222);
+  color:#fff;
+  text-align:center;
+}
+
+.hero-content{
+  padding:60px 0;
+}
+
+.hero h1{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.hero span{
+  color:#00ffcc;
+}
+
+.hero p{
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.btn{
+  display:inline-block;
+  background:#00ffcc;
+  color:#000;
+  padding:12px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ===== SERVICES ===== */
+#services{
+  padding:40px 0;
+}
+
+.section-title{
+  text-align:center;
+  font-size:22px;
+  margin-bottom:30px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.card{
+  background:#f5f5f5;
+  padding:25px;
+  text-align:center;
+  border-radius:12px;
+}
+
+.card i{
+  font-size:28px;
+  color:#00aa88;
+  margin-bottom:10px;
+}
+
+.card h3{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+/* ===== PORTFOLIO ===== */
+#portfolio{
+  padding:40px 0;
+  background:#fafafa;
+}
+
+.portfolio{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+.project{
+  background:#fff;
+  padding:10px;
+  border-radius:12px;
+}
+
+.project img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px;
+}
+
+.coming-soon{
+  padding:40px;
+  text-align:center;
+  font-weight:600;
+}
+
+/* ===== CONTACT ===== */
+#contact{
+  padding:40px 0;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+input,textarea,button{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+
+textarea{
+  resize:none;
+  height:100px;
+}
+
+button{
+  background:#00ffcc;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  font-size:13px;
+}
+
+/* ===== FLOATING WHATSAPP ===== */
+.floating-whatsapp{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  width:52px;
+  height:52px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:26px;
+  text-decoration:none;
+  z-index:999;
+}
+
+/* ===== DESKTOP UPGRADE ===== */
+@media(min-width:768px){
+
+  .hero h1{font-size:42px;}
+
+  .services{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .portfolio{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  nav ul li a{
+    font-size:16px;
+  }
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
@@ -33,7 +265,7 @@
 <section class="hero" id="home">
   <div class="container hero-content">
     <h1>I Build <span>Modern</span> Websites</h1>
-    <p>Fast, responsive and conversion-focused websites for businesses & brands.</p>
+    <p>Fast, responsive & conversion-focused websites.</p>
     <a href="#contact" class="btn">Get Your Website</a>
   </div>
 </section>
@@ -45,84 +277,54 @@
       <div class="card">
         <i class="fas fa-code"></i>
         <h3>Website Development</h3>
-        <p>Clean, fast and SEO-ready websites.</p>
+        <p>Clean & fast websites.</p>
       </div>
       <div class="card">
         <i class="fas fa-palette"></i>
         <h3>UI / UX Design</h3>
-        <p>Modern layouts with smooth experience.</p>
+        <p>Modern & smooth design.</p>
       </div>
       <div class="card">
         <i class="fas fa-mobile-alt"></i>
         <h3>Responsive Design</h3>
-        <p>Perfect on mobile, tablet & desktop.</p>
+        <p>Mobile perfect layout.</p>
       </div>
     </div>
   </div>
 </section>
+
 <section id="portfolio">
   <div class="container">
     <h2 class="section-title">Portfolio</h2>
     <div class="portfolio">
-      <!-- Project One with Screenshot -->
       <div class="project">
-        <img src="Screenshot (158).png" alt="Project One Screenshot">
+        <img src="Screenshot (158).png">
       </div>
-
-      <!-- Project Two with Screenshot -->
       <div class="project">
-        <img src="Screenshot (159).png" alt="Project Two Screenshot">
+        <img src="Screenshot (159).png">
       </div>
-
-      <!-- Project Three - Coming Soon -->
-      <div class="project coming-soon">
-        Project Three - Coming Soon
-      </div>
+      <div class="project coming-soon">Coming Soon</div>
     </div>
   </div>
 </section>
+
 <section id="contact">
   <div class="container">
     <h2 class="section-title">Contact Me</h2>
     <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </div>
 </section>
 
-<script>
-  const form = document.getElementById('contactForm');
-  const whatsappNumber = "7387304707"; // your WhatsApp number
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault(); // prevent form from submitting normally
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if(name === "" || email === "" || message === "") return;
-
-    // Construct the WhatsApp message
-    const text = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Message:* ${message}`;
-    
-    // Open WhatsApp with the pre-filled message
-    const url = `https://wa.me/${whatsappNumber}?text=${text}`;
-    window.open(url, '_blank');
-    
-    // Optional: reset form after opening WhatsApp
-    form.reset();
-  });
-</script>
-
 <footer>
-  <p>© 2025 Royal Website Developer. All rights reserved.</p>
+  © 2025 Royal Website Developer
 </footer>
 
-<a href="https://wa.me/1234567890" target="_blank" class="floating-whatsapp">
+<a href="https://wa.me/7387304707" class="floating-whatsapp" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
 
