@@ -47,51 +47,84 @@ header{
   align-items:center;
   padding:12px 0;
 }
-.logo{
-  color:#fff;
-  font-weight:700;
-  font-size:18px;
-}
-
-/* ===== MOBILE NAV BUTTONS (REAL BUTTON LOOK) ===== */
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:10px;
-}
-
-/* BUTTON STYLE */
-nav ul li a{
-  display:inline-block;
-  color:#fff;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:600;
-  padding:10px 18px;
-  border-radius:999px; /* full pill */
-  background:linear-gradient(135deg,#22d3ee,#0ea5e9);
-  box-shadow:0 6px 15px rgba(0,0,0,0.25);
-  transition:all 0.25s ease;
-}
-
-/* PRESS EFFECT (mobile feel) */
-nav ul li a:active{
-  transform:scale(0.95);
-  box-shadow:0 3px 8px rgba(0,0,0,0.3);
-}
-
-/* ===== DESKTOP CLEAN LOOK ===== */
+/* ===== DESKTOP (NORMAL NAV) ===== */
 @media(min-width:768px){
-  nav ul li a{
+  .mobile-nav{
+    position:static;
+  }
+
+  .mobile-nav ul{
+    display:flex;
+    gap:16px;
+  }
+
+  .mobile-nav ul li a{
     background:none;
-    box-shadow:none;
+    color:#fff;
     padding:0;
     font-size:16px;
+  }
+
+  .mobile-nav ul li a span{
+    display:none;
+  }
+}
+
+/* ===== MOBILE APP STYLE NAV ===== */
+@media(max-width:767px){
+
+  .mobile-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#0f172a;
+    border-top:1px solid rgba(255,255,255,0.1);
+    z-index:999;
+  }
+
+  .mobile-nav ul{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:10px 0;
+    list-style:none;
+  }
+
+  .mobile-nav ul li a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:#cbd5f5;
+    text-decoration:none;
+    font-size:11px;
+    gap:4px;
+    padding:6px 10px;
+    transition:0.2s;
+  }
+
+  .mobile-nav ul li a i{
+    font-size:20px;
+    color:#22d3ee;
+  }
+
+  .mobile-nav ul li a:active{
+    transform:scale(0.9);
+  }
+
+  /* Active feel (optional default home) */
+  .mobile-nav ul li a.active{
     color:#fff;
   }
 
-  nav ul{
-    gap:16px;
+  .mobile-nav ul li a.active i{
+    color:#38bdf8;
+  }
+
+  /* BODY BOTTOM SPACE */
+  body{
+    padding-bottom:70px;
   }
 }
 
