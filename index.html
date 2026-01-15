@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Royal Website Developer</title>
+<title>Royal Web Services</title>
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -123,12 +123,18 @@ nav ul li a{
   padding:25px;
   text-align:center;
   border-radius:12px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .card i{
-  font-size:28px;
+  font-size:30px;
   color:#00aa88;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .card h3{
@@ -136,35 +142,9 @@ nav ul li a{
   margin-bottom:6px;
 }
 
-/* ===== PORTFOLIO ===== */
-#portfolio{
-  padding:40px 0;
-  background:#fafafa;
-}
-
-.portfolio{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:20px;
-}
-
-.project{
-  background:#fff;
-  padding:10px;
-  border-radius:12px;
-}
-
-.project img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:10px;
-}
-
-.coming-soon{
-  padding:40px;
-  text-align:center;
-  font-weight:600;
+.card p{
+  font-size:13px;
+  color:#555;
 }
 
 /* ===== CONTACT ===== */
@@ -225,22 +205,11 @@ footer{
   z-index:999;
 }
 
-/* ===== DESKTOP UPGRADE ===== */
+/* ===== DESKTOP ===== */
 @media(min-width:768px){
-
   .hero h1{font-size:42px;}
-
-  .services{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .portfolio{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  nav ul li a{
-    font-size:16px;
-  }
+  .services{grid-template-columns:repeat(3,1fr);}
+  nav ul li a{font-size:16px;}
 }
 
 </style>
@@ -250,12 +219,11 @@ footer{
 
 <header>
   <div class="container nav">
-    <div class="logo">Royal WebDev</div>
+    <div class="logo">Royal Web Services</div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -264,46 +232,24 @@ footer{
 
 <section class="hero" id="home">
   <div class="container hero-content">
-    <h1>I Build <span>Modern</span> Websites</h1>
-    <p>Fast, responsive & conversion-focused websites.</p>
-    <a href="#contact" class="btn">Get Your Website</a>
+    <h1>Online <span>Government</span> Services</h1>
+    <p>Fast • Trusted • Affordable</p>
+    <a href="#contact" class="btn">Apply Now</a>
   </div>
 </section>
 
 <section id="services">
   <div class="container">
-    <h2 class="section-title">My Services</h2>
+    <h2 class="section-title">Our Services</h2>
     <div class="services">
-      <div class="card">
-        <i class="fas fa-code"></i>
-        <h3>Website Development</h3>
-        <p>Clean & fast websites.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-palette"></i>
-        <h3>UI / UX Design</h3>
-        <p>Modern & smooth design.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-mobile-alt"></i>
-        <h3>Responsive Design</h3>
-        <p>Mobile perfect layout.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="portfolio">
-  <div class="container">
-    <h2 class="section-title">Portfolio</h2>
-    <div class="portfolio">
-      <div class="project">
-        <img src="Screenshot (158).png">
-      </div>
-      <div class="project">
-        <img src="Screenshot (159).png">
-      </div>
-      <div class="project coming-soon">Coming Soon</div>
+      <div class="card"><i class="fas fa-store"></i><h3>Shop Act</h3><p>New & Renewal</p></div>
+      <div class="card"><i class="fas fa-industry"></i><h3>Udyam Aadhaar</h3><p>MSME Registration</p></div>
+      <div class="card"><i class="fas fa-id-card"></i><h3>PAN Card</h3><p>New & Correction</p></div>
+      <div class="card"><i class="fas fa-user-hard-hat"></i><h3>E-Shram Card</h3><p>Labour Card</p></div>
+      <div class="card"><i class="fas fa-vote-yea"></i><h3>Election Card</h3><p>Voter ID</p></div>
+      <div class="card"><i class="fas fa-briefcase"></i><h3>Job Forms</h3><p>Online Apply</p></div>
+
     </div>
   </div>
 </section>
@@ -311,22 +257,47 @@ footer{
 <section id="contact">
   <div class="container">
     <h2 class="section-title">Contact Me</h2>
+
     <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send on WhatsApp</button>
     </form>
+
   </div>
 </section>
 
 <footer>
-  © 2025 Royal Website Developer
+  © 2025 Royal Web Services
 </footer>
 
 <a href="https://wa.me/7387304707" class="floating-whatsapp" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
+
+<!-- ===== WHATSAPP FORM SCRIPT ===== -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  var whatsappNumber = "7387304707";
+
+  var text =
+    "Hello Royal Web Services,%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Email: " + email + "%0A" +
+    "Message: " + message;
+
+  var url = "https://wa.me/" + whatsappNumber + "?text=" + text;
+
+  window.open(url, "_blank");
+});
+</script>
 
 </body>
 </html>
