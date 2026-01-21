@@ -35,7 +35,7 @@ html,body{
 
 /* ===== HEADER ===== */
 header{
-  background:#111;
+  background:#095f4e67;
   position:sticky;
   top:0;
   z-index:1000;
@@ -106,7 +106,7 @@ nav ul li a:active{
 
 /* ===== HERO ===== */
 .hero{
-  background:linear-gradient(135deg,#000,#222);
+  background:linear-gradient(135deg,#6c0202,#222);
   color:#fff;
   text-align:center;
 }
@@ -296,6 +296,34 @@ footer{
   nav ul li a{font-size:16px;}
 }
 
+
+
+
+
+.documents-box{
+  display:none;
+  background:#fff;
+  margin-top:30px;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.documents-box h3{
+  margin-bottom:15px;
+  color:#222;
+}
+
+.documents-box ul{
+  padding-left:20px;
+}
+
+.documents-box ul li{
+  margin-bottom:8px;
+  font-size:16px;
+}
+
+
 </style>
 </head>
 
@@ -321,21 +349,58 @@ footer{
     <a href="#contact" class="btn">Apply Now</a>
   </div>
 </section>
-
 <section id="services">
   <div class="container">
     <h2 class="section-title">Our Services</h2>
+
     <div class="services">
 
-      <div class="card"><i class="fas fa-store"></i><h3>Shop Act</h3><p>New & Renewal</p></div>
-      <div class="card"><i class="fas fa-industry"></i><h3>Udyam Aadhaar</h3><p>MSME Registration</p></div>
-      <div class="card"><i class="fas fa-id-card"></i><h3>PAN Card</h3><p>New & Correction</p></div>
-      <div class="card"><i class="fas fa-user-hard-hat"></i><h3>E-Shram Card</h3><p>Labour Card</p></div>
-      <div class="card"><i class="fas fa-vote-yea"></i><h3>Election Card</h3><p>Voter ID</p></div>
-      <div class="card"><i class="fas fa-briefcase"></i><h3>Job Forms</h3><p>Online Apply</p></div>
+      <div class="card" data-service="shopact">
+        <i class="fas fa-store"></i>
+        <h3>Shop Act</h3>
+        <p>New & Renewal</p>
+      </div>
+
+      <div class="card" data-service="udyam">
+        <i class="fas fa-industry"></i>
+        <h3>Udyam Aadhaar</h3>
+        <p>MSME Registration</p>
+      </div>
+
+      <div class="card" data-service="pan">
+        <i class="fas fa-id-card"></i>
+        <h3>PAN Card</h3>
+        <p>New & Correction</p>
+      </div>
+
+      <div class="card" data-service="eshram">
+        <i class="fas fa-id-card"></i>
+        <h3>E-Shram Card</h3>
+        <p>Labour Card</p>
+      </div>
+
+      <div class="card" data-service="voter">
+        <i class="fas fa-vote-yea"></i>
+        <h3>Election Card</h3>
+        <p>Voter ID</p>
+      </div>
+
+      <div class="card" data-service="job">
+        <i class="fas fa-briefcase"></i>
+        <h3>Job Forms</h3>
+        <p>Online Apply</p>
+      </div>
 
     </div>
+
+    <!-- 👇 YAHI PE DOCUMENTS SECTION ADD KAR -->
+    <div id="documents" class="documents-box">
+      <h3 id="doc-title">Required Documents</h3>
+      <ul id="doc-list"></ul>
+    </div>
+
   </div>
+</section>
 
   <section style="padding:20px; background:#f9f9f9;">
   <h2 style="text-align:center; margin-bottom:15px;">
@@ -465,6 +530,36 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
   var url = "https://wa.me/" + whatsappNumber + "?text=" + text;
 
   window.open(url, "_blank");
+});
+</script>
+<script>
+const documentsData = {
+  shopact: ["Aadhaar Card","PAN Card","Shop Address Proof","Photo"],
+  udyam: ["Aadhaar Card","PAN Card","Business Details"],
+  pan: ["Aadhaar Card","Photo","Signature"],
+  eshram: ["Aadhaar Card","Mobile Number","Bank Passbook"],
+  voter: ["Aadhaar Card","Address Proof","Photo"],
+  job: ["Aadhaar Card","Education Certificate","Photo","Signature"]
+};
+
+const cards = document.querySelectorAll(".card");
+const docBox = document.getElementById("documents");
+const docList = document.getElementById("doc-list");
+
+cards.forEach(card=>{
+  card.addEventListener("click",()=>{
+    const service = card.dataset.service;
+    docList.innerHTML = "";
+
+    documentsData[service].forEach(doc=>{
+      const li = document.createElement("li");
+      li.textContent = doc;
+      docList.appendChild(li);
+    });
+
+    docBox.style.display = "block";
+    docBox.scrollIntoView({behavior:"smooth"});
+  });
 });
 </script>
 
