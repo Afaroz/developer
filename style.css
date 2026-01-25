@@ -74,8 +74,8 @@ header{
 
 /* ========================= HERO ========================= */
 .hero{
-  min-height: 520px;   /* Desktop perfect height */
-  padding: 80px 16px;
+  min-height:520px;          /* Desktop height */
+  padding:80px 16px;
 
   display:flex;
   align-items:center;
@@ -88,15 +88,39 @@ header{
 .hero h1{
   font-size:52px;
   margin-bottom:18px;
+  line-height:1.2;
 }
 
-.hero h1 span{ color:#38bdf8; }
+.hero h1 span{
+  color:#38bdf8;
+}
 
 .hero p{
   font-size:18px;
   max-width:650px;
   margin:0 auto 36px;
   opacity:0.85;
+  line-height:1.6;
+}
+
+/* ========================= MOBILE FIX ========================= */
+@media (max-width:768px){
+
+  .hero{
+    min-height:auto;       /* 🔥 height flexible */
+    padding:70px 14px 60px;
+  }
+
+  .hero h1{
+    font-size:32px;        /* readable on mobile */
+    margin-bottom:14px;
+  }
+
+  .hero p{
+    font-size:15px;
+    margin-bottom:26px;
+    max-width:100%;
+  }
 }
 
 /* ========================= BUTTON ========================= */
