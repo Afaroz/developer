@@ -43,9 +43,10 @@ header{
   align-items:center;
 }
 
+
 /* LOGO IMAGE */
 .logo img{
-  height:70px;
+  height:60px;
   width:auto;
 }
 
@@ -250,7 +251,7 @@ footer{
 /* ========================= DESKTOP ========================= */
 @media(min-width:768px){
 
-  .logo img{ height:48px; }
+  .logo img{ height:60px; }
 
   .nav-links{ gap:20px; }
 
