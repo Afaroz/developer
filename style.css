@@ -6,6 +6,12 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ========================= BASE ========================= */
 body {
   background: linear-gradient(180deg, #020617, #0f172a);
   color: #e5e7eb;
@@ -17,7 +23,6 @@ a {
   color: inherit;
 }
 
-/* ========================= CONTAINER ========================= */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -28,7 +33,7 @@ a {
 header {
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
   background: rgba(2, 6, 23, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -47,33 +52,28 @@ header {
   color: #38bdf8;
 }
 
-/* NAV LINKS */
+.logo span {
+  color: #00ffcc;
+}
+
+/* ========================= NAV ========================= */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 22px;
 }
 
-nav a {
+nav ul li a {
   font-size: 15px;
   font-weight: 500;
-  color: #e5e7eb;
-  position: relative;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: 0.25s;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #38bdf8;
-  transition: 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
+nav ul li a:hover {
+  background: rgba(56,189,248,0.15);
+  color: #38bdf8;
 }
 
 /* ========================= HERO ========================= */
@@ -90,8 +90,7 @@ nav a:hover::after {
 .hero h1 {
   font-size: 52px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .hero h1 span {
@@ -105,7 +104,7 @@ nav a:hover::after {
   opacity: 0.85;
 }
 
-/* BUTTON */
+/* ========================= BUTTON ========================= */
 .btn {
   display: inline-block;
   padding: 14px 36px;
@@ -122,7 +121,7 @@ nav a:hover::after {
   box-shadow: 0 14px 35px rgba(56,189,248,0.6);
 }
 
-/* ========================= SECTIONS ========================= */
+/* ========================= SECTION ========================= */
 section {
   padding: 90px 0;
 }
@@ -151,7 +150,7 @@ section {
 }
 
 .card {
-  background: linear-gradient(180deg, #020617, #020617);
+  background: #020617;
   padding: 32px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.06);
@@ -179,10 +178,9 @@ section {
 }
 
 .project {
-  height: 180px;
+  height: 200px;
   border-radius: 16px;
   overflow: hidden;
-  background: #020617;
 }
 
 .project img {
@@ -211,7 +209,6 @@ textarea {
   border: 1px solid rgba(255,255,255,0.15);
   background: #020617;
   color: #fff;
-  font-size: 15px;
 }
 
 input:focus,
@@ -234,11 +231,6 @@ button {
   color: #020617;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: translateY(-2px);
 }
 
 /* ========================= FOOTER ========================= */
@@ -267,7 +259,7 @@ footer {
   box-shadow: 0 12px 28px rgba(0,0,0,0.4);
 }
 
-/* ========================= MOBILE FIX ========================= */
+/* ========================= MOBILE ========================= */
 @media (max-width: 768px) {
 
   nav ul {
