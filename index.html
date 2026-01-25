@@ -19,17 +19,24 @@
 
 <header>
   <div class="container nav">
-    <div class="logo">App <span>Development</span></div>
 
+    <!-- LOGO IMAGE -->
+    <div class="logo">
+      <img src="logo.png" alt="App Development Logo">
+    </div>
+
+    <!-- NAVIGATION -->
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
   </div>
 </header>
+
 
 <section class="hero" id="home">
   <div class="container hero-content">
@@ -91,78 +98,36 @@
   </div>
 </section>
 
-  <section style="padding:20px; background:#f9f9f9;">
-  <h2 style="text-align:center; margin-bottom:15px;">
-    Live Demo Websites
-  </h2>
 
-  <div style="
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
-    max-width:900px;
-    margin:auto;
-  ">
+<section class="demo-section">
+  <h2 class="demo-title">Live Demo Websites</h2>
+
+  <div class="demo-grid">
 
     <!-- Mobile Shop Demo -->
-    <div style="
-      background:#fff;
-      padding:15px;
-      border-radius:10px;
-      box-shadow:0 3px 8px rgba(0,0,0,0.1);
-      text-align:center;
-    ">
-      <h3 style="margin-bottom:8px;">Mobile Shop Demo</h3>
-      <p style="font-size:14px; color:#555;">
-        Mobile shop ke liye ready demo website
-      </p>
+    <div class="demo-card">
+      <h3>Mobile Shop Demo</h3>
+      <p>Mobile shop ke liye ready demo website</p>
       <a href="https://aquamarine-starburst-99e5dd.netlify.app"
          target="_blank"
-         style="
-           display:inline-block;
-           margin-top:10px;
-           padding:10px 16px;
-           background:#0d6efd;
-           color:#fff;
-           text-decoration:none;
-           border-radius:6px;
-           font-size:14px;
-         ">
+         class="demo-btn blue">
         View Demo
       </a>
     </div>
 
     <!-- Cloth Shop Demo -->
-    <div style="
-      background:#fff;
-      padding:15px;
-      border-radius:10px;
-      box-shadow:0 3px 8px rgba(0,0,0,0.1);
-      text-align:center;
-    ">
-      <h3 style="margin-bottom:8px;">Cloth Shop Demo</h3>
-      <p style="font-size:14px; color:#555;">
-        Garments / Cloth store ke liye demo
-      </p>
+    <div class="demo-card">
+      <h3>Cloth Shop Demo</h3>
+      <p>Garments / Cloth store ke liye demo</p>
       <a href="https://jovial-phoenix-5c493c.netlify.app/"
          target="_blank"
-         style="
-           display:inline-block;
-           margin-top:10px;
-           padding:10px 16px;
-           background:#c2185b;
-           color:#fff;
-           text-decoration:none;
-           border-radius:6px;
-           font-size:14px;
-         ">
+         class="demo-btn pink">
         View Demo
       </a>
     </div>
 
   </div>
 </section>
-
 </section>
 <section id="portfolio">
   <div class="container">
