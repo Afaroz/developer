@@ -11,49 +11,98 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
 
+  <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
+
   <div class="container nav">
 
+    <!-- LOGO -->
     <a href="#home" class="logo">
       <img src="logo.png" alt="Royal Web Services">
     </a>
 
+
+    <!-- NAVIGATION -->
     <nav>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#rental">Rental</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#rental">Rental</a>
+        </li>
+
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
       </ul>
     </nav>
 
-    <a href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20I%20need%20online%20service."
-       target="_blank"
-       class="header-wa">
-      <i class="fab fa-whatsapp"></i>
-      WhatsApp
-    </a>
+
+    <!-- HEADER ACTIONS -->
+
+    <div class="header-actions">
+
+      <a href="https://www.instagram.com/royal_website_122/"
+         target="_blank"
+         class="header-instagram"
+         aria-label="Instagram">
+
+        <i class="fab fa-instagram"></i>
+
+      </a>
+
+
+      <a href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20I%20need%20your%20service."
+         target="_blank"
+         class="header-wa">
+
+        <i class="fab fa-whatsapp"></i>
+
+        WhatsApp
+
+      </a>
+
+    </div>
 
   </div>
+
 </header>
 
 
-<!-- ================= HERO ================= -->
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
 
 <section class="hero" id="home">
 
@@ -61,71 +110,110 @@
 
   <div class="container hero-content">
 
+
     <div class="hero-badge">
+
       <i class="fas fa-circle-check"></i>
+
       Fast • Trusted • Affordable
+
     </div>
 
+
     <h1>
+
       Your <span>Digital Service</span><br>
+
       Partner
+
     </h1>
 
+
     <p>
+
       PAN Card, Shop Act, Udyam, Voter ID, Loan Applications,
       Online Forms & Professional Website Development.
+
     </p>
+
 
     <div class="hero-buttons">
 
-      <a href="#services" class="btn primary-btn">
-        <i class="fas fa-grid-2"></i>
+      <a href="#services"
+         class="btn primary-btn">
+
+        <i class="fas fa-layer-group"></i>
+
         Explore Services
+
       </a>
+
 
       <a href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20I%20want%20to%20know%20about%20your%20services."
          target="_blank"
          class="btn whatsapp-btn">
+
         <i class="fab fa-whatsapp"></i>
+
         Chat on WhatsApp
+
       </a>
 
     </div>
 
+
     <div class="hero-stats">
 
       <div>
+
         <strong>15+</strong>
+
         <span>Services</span>
+
       </div>
 
+
       <div>
+
         <strong>24/7</strong>
+
         <span>WhatsApp Support</span>
+
       </div>
 
+
       <div>
+
         <strong>Fast</strong>
+
         <span>Online Assistance</span>
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+
+<!-- =====================================================
+     SERVICES SECTION
+===================================================== -->
 
 <section id="services" class="services-section">
 
   <div class="container">
 
+
     <div class="section-heading">
 
       <span>WHAT WE OFFER</span>
 
-      <h2>Our <strong>Online Services</strong></h2>
+      <h2>
+        Our <strong>Online Services</strong>
+      </h2>
 
       <p>
         Select any service and contact us directly on WhatsApp.
@@ -134,29 +222,41 @@
     </div>
 
 
+
     <div class="services-grid">
 
 
-      <!-- PAN -->
+      <!-- ================= PAN CARD ================= -->
 
       <div class="service-card">
 
         <div class="service-icon blue">
+
           <i class="fas fa-id-card"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>PAN Card</h3>
 
-          <p>New PAN Card Application</p>
+          <p>
+            New PAN Card Application
+          </p>
 
-          <div class="service-tag">New Application</div>
+          <div class="service-tag">
+            New Application
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('PAN Card New Application')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -164,26 +264,38 @@
       </div>
 
 
-      <!-- PAN UPDATE -->
+
+      <!-- ================= PAN UPDATE ================= -->
 
       <div class="service-card">
 
         <div class="service-icon purple">
+
           <i class="fas fa-id-card-clip"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>PAN Card Update</h3>
 
-          <p>Name, DOB, Photo & Details Correction</p>
+          <p>
+            Name, DOB, Photo & Details Correction
+          </p>
 
-          <div class="service-tag">Correction / Update</div>
+          <div class="service-tag">
+            Correction / Update
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('PAN Card Update / Correction')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -191,26 +303,38 @@
       </div>
 
 
-      <!-- SHOP ACT -->
+
+      <!-- ================= SHOP ACT ================= -->
 
       <div class="service-card">
 
         <div class="service-icon orange">
+
           <i class="fas fa-store"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Shop Act</h3>
 
-          <p>New Shop Act Registration</p>
+          <p>
+            New Shop Act Registration
+          </p>
 
-          <div class="service-tag">Business Registration</div>
+          <div class="service-tag">
+            Business Registration
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Shop Act New Registration')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -218,26 +342,38 @@
       </div>
 
 
-      <!-- SHOP ACT RENEWAL -->
+
+      <!-- ================= SHOP ACT RENEWAL ================= -->
 
       <div class="service-card">
 
         <div class="service-icon red">
+
           <i class="fas fa-rotate"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Shop Act Renewal</h3>
 
-          <p>Renewal & Online Assistance</p>
+          <p>
+            Renewal & Online Assistance
+          </p>
 
-          <div class="service-tag">Renewal</div>
+          <div class="service-tag">
+            Renewal
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Shop Act Renewal')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -245,26 +381,38 @@
       </div>
 
 
-      <!-- UDYAM -->
+
+      <!-- ================= UDYAM ================= -->
 
       <div class="service-card">
 
         <div class="service-icon green">
+
           <i class="fas fa-industry"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Udyam Registration</h3>
 
-          <p>MSME / Udyam Registration</p>
+          <p>
+            MSME / Udyam Registration
+          </p>
 
-          <div class="service-tag">MSME</div>
+          <div class="service-tag">
+            MSME
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Udyam Registration')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -272,26 +420,38 @@
       </div>
 
 
-      <!-- UDYAM UPDATE -->
+
+      <!-- ================= UDYAM UPDATE ================= -->
 
       <div class="service-card">
 
         <div class="service-icon teal">
+
           <i class="fas fa-file-pen"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Udyam Update</h3>
 
-          <p>Update & Correction in Udyam</p>
+          <p>
+            Update & Correction in Udyam
+          </p>
 
-          <div class="service-tag">Update</div>
+          <div class="service-tag">
+            Update
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Udyam Registration Update / Correction')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -299,26 +459,38 @@
       </div>
 
 
-      <!-- VOTER -->
+
+      <!-- ================= VOTER ID ================= -->
 
       <div class="service-card">
 
         <div class="service-icon pink">
+
           <i class="fas fa-vote-yea"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Voter ID</h3>
 
-          <p>New Election Card Application</p>
+          <p>
+            New Election Card Application
+          </p>
 
-          <div class="service-tag">New Application</div>
+          <div class="service-tag">
+            New Application
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('New Voter ID / Election Card')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -326,26 +498,38 @@
       </div>
 
 
-      <!-- VOTER UPDATE -->
+
+      <!-- ================= VOTER UPDATE ================= -->
 
       <div class="service-card">
 
         <div class="service-icon indigo">
+
           <i class="fas fa-address-card"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Voter ID Update</h3>
 
-          <p>Name, Address & Other Correction</p>
+          <p>
+            Name, Address & Other Correction
+          </p>
 
-          <div class="service-tag">Correction / Update</div>
+          <div class="service-tag">
+            Correction / Update
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Voter ID / Election Card Update')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -353,26 +537,38 @@
       </div>
 
 
-      <!-- E SHRAMP -->
+
+      <!-- ================= E SHRMA ================= -->
 
       <div class="service-card">
 
         <div class="service-icon yellow">
+
           <i class="fas fa-person"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>E-Shram Card</h3>
 
-          <p>Labour Card Registration</p>
+          <p>
+            Labour Card Registration
+          </p>
 
-          <div class="service-tag">Government Service</div>
+          <div class="service-tag">
+            Government Service
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('E-Shram Card')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -380,26 +576,38 @@
       </div>
 
 
-      <!-- FSSAI -->
+
+      <!-- ================= FSSAI ================= -->
 
       <div class="service-card">
 
         <div class="service-icon food">
+
           <i class="fas fa-utensils"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>FSSAI Registration</h3>
 
-          <p>Food Business Registration Assistance</p>
+          <p>
+            Food Business Registration Assistance
+          </p>
 
-          <div class="service-tag">Food Business</div>
+          <div class="service-tag">
+            Food Business
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('FSSAI Registration')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -407,26 +615,38 @@
       </div>
 
 
-      <!-- JOB FORM -->
+
+      <!-- ================= JOB FORMS ================= -->
 
       <div class="service-card">
 
         <div class="service-icon dark">
+
           <i class="fas fa-briefcase"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Job Forms</h3>
 
-          <p>Government & Private Job Forms</p>
+          <p>
+            Government & Private Job Forms
+          </p>
 
-          <div class="service-tag">Online Apply</div>
+          <div class="service-tag">
+            Online Apply
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Job Form / Online Application')">
+
             <i class="fab fa-whatsapp"></i>
+
             Apply on WhatsApp
+
           </button>
 
         </div>
@@ -434,26 +654,38 @@
       </div>
 
 
-      <!-- PERSONAL LOAN -->
 
-      <div class="service-card loan-card">
+      <!-- ================= PERSONAL LOAN ================= -->
+
+      <div class="service-card">
 
         <div class="service-icon loan">
+
           <i class="fas fa-hand-holding-dollar"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Personal Loan</h3>
 
-          <p>Personal Loan Application Assistance</p>
+          <p>
+            Personal Loan Application Assistance
+          </p>
 
-          <div class="service-tag">Loan Assistance</div>
+          <div class="service-tag">
+            Loan Assistance
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Personal Loan Application')">
+
             <i class="fab fa-whatsapp"></i>
+
             Enquire on WhatsApp
+
           </button>
 
         </div>
@@ -461,26 +693,38 @@
       </div>
 
 
-      <!-- BUSINESS LOAN -->
 
-      <div class="service-card loan-card">
+      <!-- ================= BUSINESS LOAN ================= -->
+
+      <div class="service-card">
 
         <div class="service-icon business">
+
           <i class="fas fa-building"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Business Loan</h3>
 
-          <p>Business Loan Application Assistance</p>
+          <p>
+            Business Loan Application Assistance
+          </p>
 
-          <div class="service-tag">Business Finance</div>
+          <div class="service-tag">
+            Business Finance
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Business Loan Application')">
+
             <i class="fab fa-whatsapp"></i>
+
             Enquire on WhatsApp
+
           </button>
 
         </div>
@@ -488,26 +732,38 @@
       </div>
 
 
-      <!-- BIKE LOAN -->
 
-      <div class="service-card loan-card">
+      <!-- ================= BIKE LOAN ================= -->
+
+      <div class="service-card">
 
         <div class="service-icon bike">
+
           <i class="fas fa-motorcycle"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Bike Loan</h3>
 
-          <p>Bike Finance Application Assistance</p>
+          <p>
+            Bike Finance Application Assistance
+          </p>
 
-          <div class="service-tag">Vehicle Finance</div>
+          <div class="service-tag">
+            Vehicle Finance
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Bike Loan Application')">
+
             <i class="fab fa-whatsapp"></i>
+
             Enquire on WhatsApp
+
           </button>
 
         </div>
@@ -515,100 +771,178 @@
       </div>
 
 
-      <!-- ONLINE FORM -->
+
+      <!-- ================= USED CAR LOAN ================= -->
+
+      <div class="service-card">
+
+        <div class="service-icon used-car">
+
+          <i class="fas fa-car-side"></i>
+
+        </div>
+
+
+        <div class="service-content">
+
+          <h3>Used Car Loan</h3>
+
+          <p>
+            Pre-Owned / Second-Hand Car Finance Assistance
+          </p>
+
+          <div class="service-tag">
+            Car Finance
+          </div>
+
+
+          <button class="service-btn"
+                  onclick="openWhatsApp('Used Car Loan Application')">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Enquire on WhatsApp
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ================= ONLINE FORM ================= -->
 
       <div class="service-card">
 
         <div class="service-icon cyan">
+
           <i class="fas fa-file-circle-check"></i>
+
         </div>
+
 
         <div class="service-content">
 
           <h3>Online Form Filling</h3>
 
-          <p>Online Application & Form Filling</p>
+          <p>
+            Online Application & Form Filling
+          </p>
 
-          <div class="service-tag">Online Service</div>
+          <div class="service-tag">
+            Online Service
+          </div>
+
 
           <button class="service-btn"
                   onclick="openWhatsApp('Online Form Filling Service')">
+
             <i class="fab fa-whatsapp"></i>
+
             Contact on WhatsApp
+
           </button>
 
         </div>
 
       </div>
 
-
-      <!-- PRINT SCAN -->
-
-      <div class="service-card">
-
-        <div class="service-icon gray">
-          <i class="fas fa-print"></i>
-        </div>
-
-        <div class="service-content">
-
-          <h3>Print / Scan Services</h3>
-
-          <p>Document Printing, Scanning & Assistance</p>
-
-          <div class="service-tag">Digital Service</div>
-
-          <button class="service-btn"
-                  onclick="openWhatsApp('Print / Scan / Document Service')">
-            <i class="fab fa-whatsapp"></i>
-            Contact on WhatsApp
-          </button>
-
-        </div>
-
-      </div>
 
     </div>
+
   </div>
+
 </section>
 
 
-<!-- ================= WHY US ================= -->
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
 
 <section class="why-section">
 
   <div class="container">
 
+
     <div class="section-heading">
+
       <span>WHY CHOOSE US</span>
-      <h2>Simple. Fast. <strong>Reliable.</strong></h2>
+
+      <h2>
+        Simple. Fast. <strong>Reliable.</strong>
+      </h2>
+
+      <p>
+        We make online services easier for you.
+      </p>
+
     </div>
+
 
     <div class="why-grid">
 
+
       <div class="why-card">
+
         <i class="fab fa-whatsapp"></i>
-        <h3>Direct WhatsApp</h3>
-        <p>Contact us directly without complicated forms.</p>
+
+        <h3>
+          Direct WhatsApp
+        </h3>
+
+        <p>
+          Contact us directly without complicated forms.
+        </p>
+
       </div>
 
+
       <div class="why-card">
+
         <i class="fas fa-bolt"></i>
-        <h3>Fast Assistance</h3>
-        <p>Quick response for online application services.</p>
+
+        <h3>
+          Fast Assistance
+        </h3>
+
+        <p>
+          Quick response for online application services.
+        </p>
+
       </div>
 
+
       <div class="why-card">
+
         <i class="fas fa-shield-halved"></i>
-        <h3>Professional Service</h3>
-        <p>Clear document requirements and transparent assistance.</p>
+
+        <h3>
+          Professional Service
+        </h3>
+
+        <p>
+          Clear document requirements and transparent assistance.
+        </p>
+
       </div>
 
+
       <div class="why-card">
+
         <i class="fas fa-headset"></i>
-        <h3>Customer Support</h3>
-        <p>Get assistance whenever you need help with your application.</p>
+
+        <h3>
+          Customer Support
+        </h3>
+
+        <p>
+          Get assistance whenever you need help.
+        </p>
+
       </div>
+
 
     </div>
 
@@ -617,17 +951,23 @@
 </section>
 
 
-<!-- ================= RENTAL ================= -->
+
+<!-- =====================================================
+     PREMIUM CAR RENTAL
+===================================================== -->
 
 <section class="premium-rental" id="rental">
 
   <div class="container">
 
+
     <div class="section-heading">
 
       <span>TRAVEL SERVICES</span>
 
-      <h2>Premium <strong>Car Rental</strong></h2>
+      <h2>
+        Premium <strong>Car Rental</strong>
+      </h2>
 
       <p>
         Safe • AC • Clean • Professional Driver Available
@@ -647,15 +987,28 @@
           Most Popular
         </div>
 
-        <img src="Cluiser.jpeg" alt="AC Cruiser">
+
+        <img src="Cluiser.jpeg"
+             alt="AC Cruiser">
+
 
         <div class="premium-info">
 
-          <h3>AC Cruiser</h3>
+          <h3>
+            AC Cruiser
+          </h3>
+
 
           <div class="price-box">
-            ₹18 <span>/ KM</span>
+
+            ₹18
+
+            <span>
+              / KM
+            </span>
+
           </div>
+
 
           <ul class="features">
 
@@ -681,31 +1034,48 @@
 
           </ul>
 
+
           <button class="premium-btn"
                   onclick="openWhatsApp('AC Cruiser Booking')">
 
             <i class="fab fa-whatsapp"></i>
+
             Book Cruiser
 
           </button>
 
         </div>
+
       </div>
+
 
 
       <!-- ERTIGA -->
 
       <div class="premium-card">
 
-        <img src="Ertiga.jpeg" alt="AC Ertiga">
+
+        <img src="Ertiga.jpeg"
+             alt="AC Ertiga">
+
 
         <div class="premium-info">
 
-          <h3>AC Ertiga</h3>
+          <h3>
+            AC Ertiga
+          </h3>
+
 
           <div class="price-box">
-            ₹12 <span>/ KM</span>
+
+            ₹12
+
+            <span>
+              / KM
+            </span>
+
           </div>
+
 
           <ul class="features">
 
@@ -731,10 +1101,12 @@
 
           </ul>
 
+
           <button class="premium-btn"
                   onclick="openWhatsApp('AC Ertiga Booking')">
 
             <i class="fab fa-whatsapp"></i>
+
             Book Ertiga
 
           </button>
@@ -743,16 +1115,24 @@
 
       </div>
 
+
     </div>
 
 
     <div class="trust-line">
+
       <i class="fas fa-circle-check"></i>
+
       Instant WhatsApp Booking
+
       <span>•</span>
+
       No Hidden Charges
+
       <span>•</span>
+
       Available 24/7
+
     </div>
 
   </div>
@@ -760,67 +1140,102 @@
 </section>
 
 
-<!-- ================= LIVE DEMO ================= -->
+
+<!-- =====================================================
+     LIVE DEMO
+===================================================== -->
 
 <section class="demo-section">
 
   <div class="container">
 
+
     <div class="section-heading">
 
       <span>OUR WORK</span>
 
-      <h2>Live Website <strong>Demos</strong></h2>
+      <h2>
+        Live Website <strong>Demos</strong>
+      </h2>
 
-      <p>See some of our ready website designs.</p>
+      <p>
+        See some of our ready website designs.
+      </p>
 
     </div>
 
 
     <div class="demo-grid">
 
+
+      <!-- MOBILE SHOP -->
+
       <div class="demo-card">
 
         <div class="demo-icon blue">
+
           <i class="fas fa-mobile-screen"></i>
+
         </div>
 
-        <h3>Mobile Shop Demo</h3>
+
+        <h3>
+          Mobile Shop Demo
+        </h3>
+
 
         <p>
           Modern website for mobile shop & accessories business.
         </p>
 
+
         <a href="https://aquamarine-starburst-99e5dd.netlify.app"
            target="_blank"
            class="demo-btn blue">
+
           View Demo
+
           <i class="fas fa-arrow-up-right-from-square"></i>
+
         </a>
 
       </div>
 
 
+
+      <!-- CLOTH SHOP -->
+
       <div class="demo-card">
 
         <div class="demo-icon pink">
+
           <i class="fas fa-shirt"></i>
+
         </div>
 
-        <h3>Cloth Shop Demo</h3>
+
+        <h3>
+          Cloth Shop Demo
+        </h3>
+
 
         <p>
           Professional website design for garments & clothing stores.
         </p>
 
+
         <a href="https://jovial-phoenix-5c493c.netlify.app/"
            target="_blank"
            class="demo-btn pink">
+
           View Demo
+
           <i class="fas fa-arrow-up-right-from-square"></i>
+
         </a>
 
       </div>
+
 
     </div>
 
@@ -829,36 +1244,60 @@
 </section>
 
 
-<!-- ================= PORTFOLIO ================= -->
+
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
 
 <section id="portfolio">
 
   <div class="container">
 
+
     <div class="section-heading">
 
       <span>PORTFOLIO</span>
 
-      <h2>Our Recent <strong>Work</strong></h2>
+      <h2>
+        Our Recent <strong>Work</strong>
+      </h2>
+
+      <p>
+        Professional websites designed for different businesses.
+      </p>
 
     </div>
 
+
     <div class="portfolio">
 
-      <div class="project">
-        <img src="Screenshot (158).png"
-             alt="Website Project">
-      </div>
 
       <div class="project">
-        <img src="Screenshot (159).png"
-             alt="Website Project">
+
+        <img src="Screenshot (158).png"
+             alt="Website Project 1">
+
       </div>
+
+
+      <div class="project">
+
+        <img src="Screenshot (159).png"
+             alt="Website Project 2">
+
+      </div>
+
 
       <div class="project coming-soon">
+
         <i class="fas fa-plus"></i>
-        <span>More Projects Coming Soon</span>
+
+        <span>
+          More Projects Coming Soon
+        </span>
+
       </div>
+
 
     </div>
 
@@ -867,26 +1306,49 @@
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section id="contact" class="contact-section">
 
   <div class="container">
 
+
     <div class="contact-box">
+
+
+      <!-- CONTACT INFORMATION -->
 
       <div class="contact-info">
 
-        <span>GET IN TOUCH</span>
+
+        <span>
+          GET IN TOUCH
+        </span>
+
 
         <h2>
+
           Need a Service?
-          <strong>Let's Talk.</strong>
+
+          <strong>
+            Let's Talk.
+          </strong>
+
         </h2>
 
+
         <p>
-          Send us your requirement and we will contact you on WhatsApp.
+
+          Online service ke liye WhatsApp par message karein.
+          Aap apni requirement directly share kar sakte hain.
+
         </p>
+
+
+        <!-- WHATSAPP BUTTON -->
 
         <a href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20I%20need%20your%20service."
            target="_blank"
@@ -898,36 +1360,132 @@
 
         </a>
 
-        <div class="phone-number">
-          <i class="fas fa-phone"></i>
-          +91 73873 04707
+
+        <!-- CONTACT DETAILS -->
+
+        <div class="contact-details">
+
+
+          <!-- PHONE -->
+
+          <a href="tel:+917387304707"
+             class="contact-detail">
+
+            <i class="fas fa-phone"></i>
+
+            <div>
+
+              <small>
+                Call / WhatsApp
+              </small>
+
+              <strong>
+                +91 73873 04707
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- EMAIL -->
+
+          <a href="mailto:shaikhafaroz841@gmail.com"
+             class="contact-detail">
+
+            <i class="fas fa-envelope"></i>
+
+            <div>
+
+              <small>
+                Email
+              </small>
+
+              <strong>
+                shaikhafaroz841@gmail.com
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- INSTAGRAM -->
+
+          <a href="https://www.instagram.com/royal_website_122/"
+             target="_blank"
+             class="contact-detail instagram-contact">
+
+            <i class="fab fa-instagram"></i>
+
+            <div>
+
+              <small>
+                Follow us on Instagram
+              </small>
+
+              <strong>
+                @royal_website_122
+              </strong>
+
+            </div>
+
+          </a>
+
+
         </div>
 
       </div>
 
 
+
+      <!-- ENQUIRY FORM -->
+
       <form id="contactForm">
 
-        <h3>Send Enquiry</h3>
+
+        <div class="form-header">
+
+          <span>
+            QUICK ENQUIRY
+          </span>
+
+          <h3>
+            Tell Us What You Need
+          </h3>
+
+          <p>
+            Fill the details and we'll open WhatsApp for you.
+          </p>
+
+        </div>
+
 
         <input type="text"
                id="name"
                placeholder="Your Name"
                required>
 
+
         <input type="tel"
                id="mobile"
                placeholder="Your Mobile Number"
                required>
 
+
         <textarea id="message"
                   placeholder="What service do you need?"
                   required></textarea>
 
+
         <button type="submit">
+
           <i class="fab fa-whatsapp"></i>
+
           Send Enquiry on WhatsApp
+
         </button>
+
 
       </form>
 
@@ -938,39 +1496,117 @@
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
   <div class="container">
 
+
     <div class="footer-logo">
-      <img src="logo.png" alt="Royal Web Services">
+
+      <img src="logo.png"
+           alt="Royal Web Services">
+
     </div>
 
-    <h3>Royal Web Services</h3>
+
+    <h3>
+      Royal Web Services
+    </h3>
+
 
     <p>
       Online Services • Website Development • Digital Assistance
     </p>
 
-    <a href="https://wa.me/917387304707"
-       target="_blank"
-       class="footer-wa">
-      <i class="fab fa-whatsapp"></i>
-      +91 73873 04707
-    </a>
+
+    <!-- SOCIAL BUTTONS -->
+
+    <div class="footer-social">
+
+
+      <a href="https://wa.me/917387304707"
+         target="_blank"
+         class="footer-social-btn whatsapp">
+
+        <i class="fab fa-whatsapp"></i>
+
+        WhatsApp
+
+      </a>
+
+
+      <a href="https://www.instagram.com/royal_website_122/"
+         target="_blank"
+         class="footer-social-btn instagram">
+
+        <i class="fab fa-instagram"></i>
+
+        Instagram
+
+      </a>
+
+
+      <a href="mailto:shaikhafaroz841@gmail.com"
+         class="footer-social-btn email">
+
+        <i class="fas fa-envelope"></i>
+
+        Email
+
+      </a>
+
+
+    </div>
+
+
+    <!-- FOOTER CONTACT -->
+
+    <div class="footer-contact">
+
+
+      <a href="tel:+917387304707">
+
+        <i class="fas fa-phone"></i>
+
+        +91 73873 04707
+
+      </a>
+
+
+      <a href="mailto:shaikhafaroz841@gmail.com">
+
+        <i class="fas fa-envelope"></i>
+
+        shaikhafaroz841@gmail.com
+
+      </a>
+
+
+    </div>
+
 
     <div class="copyright">
-      © 2026 Royal Web Services. All Rights Reserved.
+
+      © 2026 Royal Web Services.
+      All Rights Reserved.
+
     </div>
+
 
   </div>
 
 </footer>
 
 
-<!-- ================= FLOATING WHATSAPP ================= -->
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
 
 <a href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20I%20need%20help."
    class="floating-whatsapp"
@@ -979,22 +1615,31 @@
 
   <i class="fab fa-whatsapp"></i>
 
-  <span>Chat</span>
+  <span>
+    Chat
+  </span>
 
 </a>
 
 
-<!-- ================= SCRIPT ================= -->
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
 const whatsappNumber = "917387304707";
 
 
-function openWhatsApp(service){
+/* =====================================================
+   SERVICE WHATSAPP
+===================================================== */
+
+function openWhatsApp(service) {
 
   const message =
-    `Hello Royal Web Services 👋
+`Hello Royal Web Services 👋
 
 Mujhe "${service}" ke regarding information chahiye.
 
@@ -1002,30 +1647,38 @@ Please mujhe required documents, charges aur process bata dijiye.
 
 Thank you.`;
 
+
   const url =
     "https://wa.me/" +
     whatsappNumber +
     "?text=" +
     encodeURIComponent(message);
 
+
   window.open(url, "_blank");
 
 }
 
 
-/* CONTACT FORM */
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
 
 document
 .getElementById("contactForm")
-.addEventListener("submit", function(e){
+.addEventListener("submit", function(e) {
 
   e.preventDefault();
+
 
   const name =
     document.getElementById("name").value.trim();
 
+
   const mobile =
     document.getElementById("mobile").value.trim();
+
 
   const message =
     document.getElementById("message").value.trim();
