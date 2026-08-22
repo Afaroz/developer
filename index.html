@@ -1,0 +1,3231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Royal Web Services | Online Services, Loans & Credit Cards</title>
+
+<meta name="description"
+content="Royal Web Services - PAN Card, Shop Act, Udyam, Credit Cards, Personal Loan, Business Loan, Home Loan, AU Bank Account and Website Development.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPXV03J7HS"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'G-CPXV03J7HS');
+</script>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f1f3f6;
+    color:#172337;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:94%;
+    max-width:1250px;
+    margin:auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    background:#2874f0;
+    position:sticky;
+    top:0;
+    z-index:9999;
+    box-shadow:0 2px 8px rgba(0,0,0,.18);
+}
+
+.top-header{
+    min-height:64px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logo{
+    width:120px;
+}
+
+.logo img{
+    width:120px;
+}
+
+
+/* SEARCH */
+
+.search-box{
+    flex:1;
+    position:relative;
+    max-width:650px;
+}
+
+.search-box input{
+    width:100%;
+    height:42px;
+    border:none;
+    outline:none;
+    border-radius:3px;
+    padding:0 48px 0 18px;
+    font-size:14px;
+    background:#fff;
+}
+
+.search-box button{
+    position:absolute;
+    right:0;
+    top:0;
+    width:48px;
+    height:42px;
+    border:none;
+    background:#ffe500;
+    color:#2874f0;
+    font-size:17px;
+    border-radius:0 3px 3px 0;
+}
+
+
+/* HEADER BUTTONS */
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-left:auto;
+}
+
+.header-btn{
+    background:white;
+    color:#2874f0;
+    padding:9px 16px;
+    border-radius:3px;
+    font-size:14px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.header-btn.whatsapp{
+    background:#25d366;
+    color:white;
+}
+
+.header-btn.instagram{
+    background:#fff;
+    color:#d62976;
+}
+
+
+/* =====================================================
+   CATEGORY BAR
+===================================================== */
+
+.category-bar{
+    background:white;
+    border-bottom:1px solid #ddd;
+}
+
+.categories{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    overflow-x:auto;
+    gap:20px;
+    padding:11px 0;
+    scrollbar-width:none;
+}
+
+.categories::-webkit-scrollbar{
+    display:none;
+}
+
+.category{
+    min-width:max-content;
+    text-align:center;
+    font-size:13px;
+    font-weight:600;
+    color:#333;
+}
+
+.category i{
+    display:block;
+    font-size:19px;
+    color:#2874f0;
+    margin-bottom:4px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    background:white;
+    margin-top:12px;
+}
+
+.hero-inner{
+    min-height:310px;
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    align-items:center;
+    gap:30px;
+}
+
+.hero-content{
+    padding:30px 0;
+}
+
+.hero-label{
+    display:inline-block;
+    background:#e8f0fe;
+    color:#2874f0;
+    padding:7px 13px;
+    border-radius:3px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:42px;
+    line-height:1.15;
+    margin-bottom:15px;
+    color:#172337;
+}
+
+.hero h1 span{
+    color:#2874f0;
+}
+
+.hero p{
+    color:#666;
+    max-width:650px;
+    font-size:15px;
+    line-height:1.7;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:22px;
+    flex-wrap:wrap;
+}
+
+.hero-btn{
+    padding:12px 20px;
+    border-radius:4px;
+    font-weight:700;
+    font-size:14px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+.hero-btn.primary{
+    background:#2874f0;
+    color:white;
+}
+
+.hero-btn.secondary{
+    background:#25d366;
+    color:white;
+}
+
+.hero-image{
+    height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#eaf2ff,#fff);
+}
+
+.hero-image i{
+    font-size:120px;
+    color:#2874f0;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section{
+    margin-top:14px;
+    background:white;
+    padding:24px;
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.section-title h2{
+    font-size:22px;
+}
+
+.section-title h2 span{
+    color:#2874f0;
+}
+
+.view-all{
+    color:#2874f0;
+    font-size:13px;
+    font-weight:700;
+}
+
+
+/* =====================================================
+   FINANCIAL PRODUCTS
+===================================================== */
+
+.finance-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.finance-card{
+    border:1px solid #e0e0e0;
+    border-radius:5px;
+    overflow:hidden;
+    background:white;
+    transition:.25s;
+    position:relative;
+}
+
+.finance-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+}
+
+.finance-top{
+    padding:22px;
+    background:linear-gradient(135deg,#2874f0,#1554c4);
+    color:white;
+}
+
+.finance-top.credit{
+    background:linear-gradient(135deg,#5b36d6,#322080);
+}
+
+.finance-top.personal{
+    background:linear-gradient(135deg,#00897b,#00695c);
+}
+
+.finance-top.business{
+    background:linear-gradient(135deg,#ff8f00,#ef6c00);
+}
+
+.finance-top.home{
+    background:linear-gradient(135deg,#e53935,#b71c1c);
+}
+
+.finance-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:rgba(255,255,255,.18);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+    margin-bottom:14px;
+}
+
+.finance-top h3{
+    font-size:19px;
+    margin-bottom:5px;
+}
+
+.finance-top p{
+    font-size:12px;
+    opacity:.9;
+}
+
+.finance-body{
+    padding:16px;
+}
+
+.finance-body ul{
+    list-style:none;
+    margin-bottom:15px;
+}
+
+.finance-body li{
+    font-size:12px;
+    margin:8px 0;
+    color:#555;
+}
+
+.finance-body li i{
+    color:#2874f0;
+    width:18px;
+}
+
+.apply-btn{
+    width:100%;
+    border:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    text-align:center;
+    background:#2874f0;
+    color:white;
+    padding:10px;
+    border-radius:3px;
+    font-weight:600;
+    font-size:13px;
+}
+
+.apply-btn.green{
+    background:#25d366;
+}
+
+
+
+
+/* =====================================================
+   FLIPKART-STYLE FINANCIAL SHOPPING UI
+===================================================== */
+
+.werize-strip{
+    background:#fff;
+    border-bottom:1px solid #ddd;
+    box-shadow:0 1px 4px rgba(0,0,0,.08);
+}
+
+.werize-strip-inner{
+    min-height:58px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.werize-mini{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.werize-mini-icon{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff3cd;
+    color:#ff9800;
+}
+
+.werize-mini strong{
+    display:block;
+    font-size:12px;
+}
+
+.werize-mini small{
+    display:block;
+    color:#777;
+    font-size:9px;
+}
+
+.werize-now{
+    background:#2874f0;
+    color:#fff;
+    padding:9px 16px;
+    border-radius:3px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.werize-now:hover{
+    background:#1554c4;
+}
+
+.finance-card,
+.cc-card,
+.service-card,
+.rental-card,
+.portfolio-card{
+    border-radius:2px !important;
+}
+
+.section{
+    box-shadow:0 1px 4px rgba(0,0,0,.08);
+}
+
+.section-title{
+    border-bottom:1px solid #eee;
+    padding-bottom:12px;
+}
+
+.section-title h2{
+    font-size:20px;
+    font-weight:600;
+}
+
+.view-all{
+    background:#2874f0;
+    color:#fff !important;
+    padding:8px 14px;
+    border-radius:2px;
+}
+
+.credit-card-showcase{
+    border-radius:2px;
+    box-shadow:0 1px 4px rgba(0,0,0,.06);
+}
+
+.cc-card{
+    border-radius:2px !important;
+    box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+
+.cc-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 18px rgba(0,0,0,.14);
+}
+
+.cc-apply{
+    border-radius:2px;
+}
+
+.apply-btn{
+    border-radius:2px !important;
+}
+
+@media(max-width:600px){
+    .werize-strip-inner{
+        padding:8px 0;
+    }
+
+    .werize-now{
+        padding:8px 9px;
+        font-size:9px;
+    }
+
+    .werize-mini strong{
+        font-size:10px;
+    }
+
+    .werize-mini small{
+        font-size:8px;
+    }
+
+    .view-all{
+        padding:7px 9px;
+        font-size:10px;
+    }
+}
+
+/* =====================================================
+   CREDIT CARD SHOWCASE
+===================================================== */
+
+.credit-card-showcase{
+    background:linear-gradient(180deg,#f8faff 0%,#fff 100%);
+    border:1px solid #e4e9f2;
+    border-radius:8px;
+    padding:22px;
+    margin-bottom:18px;
+}
+
+.credit-card-intro{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+}
+
+.offer-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:6px 10px;
+    border-radius:20px;
+    background:#eef2ff;
+    color:#4b35c8;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.4px;
+}
+
+.credit-card-intro h3{
+    font-size:21px;
+    color:#172337;
+    margin:0;
+}
+
+.credit-card-intro h3 span{
+    color:#2874f0;
+}
+
+.credit-card-intro p{
+    width:100%;
+    color:#6d7480;
+    font-size:12px;
+    margin-top:-5px;
+}
+
+.credit-card-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.cc-card{
+    background:#fff;
+    border:1px solid #e2e6ed;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+
+.cc-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(30,55,90,.13);
+    border-color:#cdd8ec;
+}
+
+.cc-head{
+    min-height:86px;
+    padding:15px;
+    color:#fff;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:8px;
+    background:linear-gradient(135deg,#1d4ed8,#2874f0);
+}
+
+.sbi-card .cc-head{background:linear-gradient(135deg,#123b82,#1769aa);}
+.flipkart-card .cc-head{background:linear-gradient(135deg,#0b63ce,#1685e5);}
+.au-card .cc-head{background:linear-gradient(135deg,#4c1d95,#7c3aed);}
+.hdfc-card .cc-head{background:linear-gradient(135deg,#b91c1c,#e53935);}
+
+.cc-bank-logo{
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:.3px;
+}
+
+.flipkart-logo{
+    font-size:15px;
+}
+
+.au-logo{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    color:#5b21b6;
+    font-size:13px;
+}
+
+.hdfc-logo{
+    font-size:15px;
+}
+
+.cc-tag{
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.25);
+    padding:5px 7px;
+    border-radius:12px;
+    font-size:8px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+.cc-body{
+    padding:16px;
+}
+
+.cc-body h3{
+    font-size:16px;
+    margin-bottom:4px;
+    color:#172337;
+}
+
+.cc-subtitle{
+    font-size:10px;
+    color:#7a828e;
+    min-height:30px;
+    line-height:1.5;
+}
+
+.cc-body ul{
+    list-style:none;
+    margin:10px 0 14px;
+}
+
+.cc-body li{
+    font-size:10px;
+    line-height:1.45;
+    margin:7px 0;
+    color:#4f5968;
+}
+
+.cc-body li i{
+    color:#2874f0;
+    margin-right:5px;
+}
+
+.cc-apply{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    width:100%;
+    padding:10px 12px;
+    border-radius:5px;
+    background:#2874f0;
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.cc-apply:hover{
+    background:#1554c4;
+    transform:translateY(-1px);
+}
+
+.cc-note{
+    margin-top:15px;
+    padding:10px 12px;
+    border-radius:5px;
+    background:#f4f7fb;
+    color:#697383;
+    font-size:9px;
+    line-height:1.55;
+}
+
+.cc-note i{
+    color:#2874f0;
+    margin-right:5px;
+}
+
+@media(max-width:1100px){
+    .credit-card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .credit-card-showcase{
+        padding:13px 10px;
+    }
+
+    .credit-card-intro h3{
+        font-size:17px;
+    }
+
+    .credit-card-grid{
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+    }
+
+    .cc-head{
+        min-height:72px;
+        padding:11px;
+    }
+
+    .cc-bank-logo{
+        font-size:13px;
+    }
+
+    .cc-body{
+        padding:11px;
+    }
+
+    .cc-body h3{
+        font-size:13px;
+    }
+
+    .cc-subtitle{
+        font-size:9px;
+        min-height:38px;
+    }
+
+    .cc-body li{
+        font-size:9px;
+    }
+
+    .cc-tag{
+        font-size:7px;
+        padding:4px 5px;
+    }
+
+    .cc-apply{
+        font-size:9px;
+        padding:9px 5px;
+    }
+
+    .cc-note{
+        font-size:8px;
+    }
+}
+
+/* =====================================================
+   AU BANK PROMO
+===================================================== */
+
+.au-banner{
+    background:linear-gradient(110deg,#111827,#243b64);
+    color:white;
+    margin-top:14px;
+    overflow:hidden;
+}
+
+.au-inner{
+    min-height:270px;
+    display:grid;
+    grid-template-columns:1.4fr .6fr;
+    align-items:center;
+    gap:25px;
+}
+
+.au-content{
+    padding:28px 0;
+}
+
+.au-badge{
+    display:inline-block;
+    background:#ffe500;
+    color:#111;
+    padding:6px 12px;
+    border-radius:3px;
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.au-content h2{
+    font-size:29px;
+    margin-bottom:10px;
+}
+
+.au-content h2 span{
+    color:#ffe500;
+}
+
+.au-content p{
+    color:#d9e0eb;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.au-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin:18px 0;
+}
+
+.au-point{
+    background:rgba(255,255,255,.1);
+    padding:8px 11px;
+    border-radius:3px;
+    font-size:11px;
+}
+
+.au-point i{
+    color:#ffe500;
+    margin-right:5px;
+}
+
+.au-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#ffe500;
+    color:#111;
+    padding:12px 18px;
+    border-radius:4px;
+    font-weight:800;
+    font-size:13px;
+}
+
+.au-visual{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.au-visual i{
+    font-size:120px;
+    color:#ffe500;
+}
+
+
+/* =====================================================
+   SERVICE GRID
+===================================================== */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.service-card{
+    border:1px solid #e1e1e1;
+    background:white;
+    padding:18px 13px;
+    text-align:center;
+    border-radius:4px;
+    transition:.25s;
+}
+
+.service-card:hover{
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+    transform:translateY(-2px);
+}
+
+.service-icon{
+    width:52px;
+    height:52px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eaf2ff;
+    color:#2874f0;
+    font-size:21px;
+}
+
+.service-card h3{
+    font-size:14px;
+    margin:11px 0 6px;
+}
+
+.service-card p{
+    color:#777;
+    font-size:11px;
+    min-height:34px;
+    line-height:1.5;
+}
+
+.service-whatsapp{
+    border:none;
+    margin-top:10px;
+    background:#25d366;
+    color:white;
+    padding:8px 10px;
+    border-radius:3px;
+    font-size:11px;
+    font-weight:600;
+}
+
+
+/* =====================================================
+   TRUST STRIP
+===================================================== */
+
+.trust-strip{
+    margin-top:14px;
+    background:white;
+    padding:20px;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.trust{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.trust i{
+    color:#2874f0;
+    font-size:25px;
+}
+
+.trust h4{
+    font-size:13px;
+}
+
+.trust p{
+    font-size:10px;
+    color:#777;
+}
+
+
+/* =====================================================
+   RENTAL
+===================================================== */
+
+.rental-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.rental-card{
+    border:1px solid #ddd;
+    display:grid;
+    grid-template-columns:45% 55%;
+    overflow:hidden;
+    border-radius:4px;
+}
+
+.rental-card img{
+    width:100%;
+    height:100%;
+    min-height:220px;
+    object-fit:cover;
+}
+
+.rental-info{
+    padding:20px;
+}
+
+.rental-info h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.rental-info ul{
+    list-style:none;
+    margin:12px 0;
+}
+
+.rental-info li{
+    font-size:12px;
+    margin:8px 0;
+    color:#555;
+}
+
+.rental-info li i{
+    color:#2874f0;
+    width:20px;
+}
+
+.rental-btn{
+    width:100%;
+    border:none;
+    background:#25d366;
+    color:white;
+    padding:10px;
+    font-weight:700;
+    border-radius:3px;
+}
+
+
+/* =====================================================
+   PORTFOLIO
+===================================================== */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.portfolio-card{
+    border:1px solid #ddd;
+    overflow:hidden;
+    background:white;
+}
+
+.portfolio-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.portfolio-info{
+    padding:14px;
+}
+
+.portfolio-info h3{
+    font-size:14px;
+}
+
+.portfolio-info p{
+    font-size:11px;
+    color:#777;
+    margin-top:5px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section{
+    margin-top:14px;
+    background:white;
+    padding:30px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-info h2{
+    font-size:30px;
+    margin:10px 0;
+}
+
+.contact-info h2 span{
+    color:#2874f0;
+}
+
+.contact-info p{
+    color:#666;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.contact-buttons{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.contact-btn{
+    padding:11px 16px;
+    border-radius:3px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.contact-btn.whatsapp{
+    background:#25d366;
+    color:white;
+}
+
+.contact-btn.call{
+    background:#2874f0;
+    color:white;
+}
+
+.enquiry{
+    border:1px solid #ddd;
+    padding:20px;
+}
+
+.enquiry h3{
+    margin-bottom:15px;
+}
+
+.enquiry input,
+.enquiry textarea{
+    width:100%;
+    border:1px solid #ddd;
+    outline:none;
+    padding:12px;
+    margin-bottom:10px;
+    font-family:inherit;
+    font-size:13px;
+}
+
+.enquiry textarea{
+    height:110px;
+    resize:none;
+}
+
+.enquiry button{
+    width:100%;
+    border:none;
+    background:#25d366;
+    color:white;
+    padding:12px;
+    font-weight:700;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:#172337;
+    color:white;
+    margin-top:14px;
+    padding:35px 0;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:30px;
+}
+
+.footer-logo img{
+    width:145px;
+    margin-bottom:12px;
+}
+
+footer p{
+    color:#b9c0cc;
+    font-size:12px;
+    line-height:1.7;
+}
+
+footer h4{
+    margin-bottom:13px;
+    font-size:14px;
+}
+
+.footer-links{
+    list-style:none;
+}
+
+.footer-links li{
+    margin:8px 0;
+    color:#b9c0cc;
+    font-size:12px;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+.footer-social{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.footer-social a{
+    padding:8px 11px;
+    border-radius:3px;
+    font-size:11px;
+}
+
+.footer-social .wa{
+    background:#25d366;
+}
+
+.footer-social .ig{
+    background:#d62976;
+}
+
+.footer-social .mail{
+    background:#2874f0;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:25px;
+    padding-top:18px;
+    color:#8f98a8;
+    font-size:11px;
+}
+
+
+/* =====================================================
+   MICRO INTERACTIONS
+===================================================== */
+
+.cc-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.18),transparent 70%);
+    transform:translateX(-120%);
+    transition:transform .65s ease;
+}
+
+.cc-card:hover::after{
+    transform:translateX(120%);
+}
+
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
+
+.floating-whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    width:55px;
+    height:55px;
+    background:#25d366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.floating-whatsapp span{
+    display:none;
+}
+
+
+/* =====================================================
+   DISCLAIMER
+===================================================== */
+
+.disclaimer{
+    background:#fff8e1;
+    border:1px solid #ffe082;
+    padding:12px;
+    margin-top:14px;
+    font-size:10px;
+    color:#665500;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+    .top-header{
+        flex-wrap:wrap;
+        padding:10px 0;
+        gap:10px;
+    }
+
+    .logo{
+        width:120px;
+    }
+
+    .logo img{
+        width:120px;
+    }
+
+    .search-box{
+        order:3;
+        flex-basis:100%;
+        max-width:none;
+    }
+
+    .header-actions{
+        margin-left:auto;
+    }
+
+    .header-btn{
+        padding:8px 10px;
+        font-size:11px;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-image{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    .finance-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .au-inner{
+        grid-template-columns:1fr;
+    }
+
+    .au-content{
+        text-align:center;
+    }
+
+    .au-points{
+        justify-content:center;
+    }
+
+    .au-visual{
+        display:none;
+    }
+
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .rental-grid{
+        grid-template-columns:1fr;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .container{
+        width:94%;
+    }
+
+    .category{
+        font-size:11px;
+    }
+
+    .category i{
+        font-size:17px;
+    }
+
+    .section{
+        padding:16px 12px;
+    }
+
+    .section-title h2{
+        font-size:18px;
+    }
+
+    .finance-grid{
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+    }
+
+    .finance-top{
+        padding:15px;
+    }
+
+    .finance-top h3{
+        font-size:15px;
+    }
+
+    .finance-body{
+        padding:12px;
+    }
+
+    .finance-body li{
+        font-size:10px;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
+    }
+
+    .service-card{
+        padding:14px 8px;
+    }
+
+    .service-card h3{
+        font-size:12px;
+    }
+
+    .service-card p{
+        font-size:9px;
+    }
+
+    .service-whatsapp{
+        font-size:9px;
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust h4{
+        font-size:11px;
+    }
+
+    .trust p{
+        font-size:9px;
+    }
+
+    .rental-card{
+        grid-template-columns:1fr;
+    }
+
+    .rental-card img{
+        height:190px;
+        min-height:0;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-section{
+        padding:20px 12px;
+    }
+
+    .contact-info h2{
+        font-size:24px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .floating-whatsapp{
+        width:auto;
+        height:45px;
+        border-radius:25px;
+        padding:0 16px;
+        gap:7px;
+        font-size:19px;
+    }
+
+    .floating-whatsapp span{
+        display:block;
+        font-size:12px;
+        font-weight:700;
+    }
+}
+
+
+/* WEBSITE DEVELOPMENT SALES */
+.website-sales-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}
+.website-sales-content{border:1px solid #e1e5eb;background:#fff;padding:25px}
+.website-badge{display:inline-flex;align-items:center;gap:7px;background:#e8f0fe;color:#2874f0;padding:7px 11px;border-radius:3px;font-size:9px;font-weight:800;letter-spacing:.4px}
+.website-sales-content h2{font-size:28px;line-height:1.25;margin:15px 0 10px;color:#172337}
+.website-sales-content h2 span{color:#2874f0}
+.website-sales-content>p{color:#66717f;font-size:12px;line-height:1.75}
+.website-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.website-features div{border:1px solid #e6e9ee;background:#fafbfc;padding:12px;display:grid;grid-template-columns:28px 1fr;column-gap:7px;align-items:center}
+.website-features i{grid-row:span 2;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#eaf2ff;color:#2874f0;font-size:12px}
+.website-features strong{font-size:10px}.website-features small{color:#777;font-size:8px;line-height:1.4}
+.website-buttons{display:flex;gap:10px;margin-top:19px;flex-wrap:wrap}
+.website-demo-btn,.website-order-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 15px;border-radius:3px;font-size:11px;font-weight:800}
+.website-demo-btn{background:#2874f0;color:#fff}.website-order-btn{background:#25d366;color:#fff}
+.website-demo-btn:hover,.website-order-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.website-demo-card{border:1px solid #dfe3e8;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);overflow:hidden;display:flex;flex-direction:column}
+.demo-browser-top{height:38px;background:#f5f6f8;border-bottom:1px solid #ddd;display:flex;align-items:center;gap:5px;padding:0 10px}
+.demo-browser-top>span{width:8px;height:8px;border-radius:50%;background:#c8ccd2}
+.demo-browser-top div{flex:1;margin-left:7px;background:#fff;border:1px solid #e0e3e7;border-radius:3px;padding:5px 8px;color:#777;font-size:8px}
+.demo-preview{flex:1;min-height:285px;background:linear-gradient(145deg,#2874f0,#1554c4);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.demo-preview:before{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(255,255,255,.15);border-radius:50%}
+.demo-icon{width:70px;height:70px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:#fff;color:#2874f0;font-size:30px;margin-bottom:13px;box-shadow:0 8px 25px rgba(0,0,0,.18);position:relative}
+.demo-preview strong{font-size:22px;position:relative}.demo-preview small{margin-top:5px;opacity:.85;font-size:10px;position:relative}
+.demo-preview>span{margin-top:18px;background:#ffe500;color:#172337;padding:9px 15px;border-radius:3px;font-size:10px;font-weight:800;position:relative}
+.demo-label{padding:12px;font-size:9px;color:#606a77;background:#fff;border-top:1px solid #eee}.demo-label i{color:#2874f0;margin-right:5px}
+@media(max-width:900px){.website-sales-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.website-sales-content{padding:16px 12px}.website-sales-content h2{font-size:22px}.website-features{gap:7px}.website-features div{padding:9px 7px;grid-template-columns:24px 1fr}.website-features i{width:24px;height:24px;font-size:10px}.website-features strong{font-size:9px}.website-features small{font-size:7px}.website-buttons{display:grid;grid-template-columns:1fr}.demo-preview{min-height:230px}}
+
+
+.website-demo-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.milega-demo{
+    background:linear-gradient(145deg,#003b40,#007f86);
+}
+
+@media(max-width:600px){
+    .website-demo-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.milega-image-link{
+    display:block;
+    background:#fff;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.milega-screenshot{
+    width:100%;
+    height:285px;
+    object-fit:cover;
+    object-position:top center;
+    display:block;
+    transition:transform .3s ease;
+}
+
+.milega-image-link:hover .milega-screenshot{
+    transform:scale(1.025);
+}
+
+@media(max-width:600px){
+    .milega-screenshot{
+        height:230px;
+    }
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="container top-header">
+
+<a href="#home" class="logo">
+<img src="logo.png" alt="Royal Web Services">
+</a>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search for services, loans, credit cards..."
+>
+
+<button onclick="searchServices()">
+<i class="fas fa-search"></i>
+</button>
+
+</div>
+
+
+<div class="header-actions">
+
+<a
+href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz"
+target="_blank"
+rel="noopener noreferrer"
+class="header-btn"
+style="background:#ffe500;color:#172337;">
+<i class="fas fa-bolt"></i>
+Werize Partner
+</a>
+
+<a
+href="https://wa.me/917387304707"
+target="_blank"
+class="header-btn whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+
+</a>
+
+<a
+href="https://www.instagram.com/royal_website_122/"
+target="_blank"
+class="header-btn instagram">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CATEGORY BAR
+===================================================== -->
+
+<div class="category-bar">
+
+<div class="container categories">
+
+<a href="#finance" class="category">
+<i class="fas fa-credit-card"></i>
+Credit Cards
+</a>
+
+<a href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz" target="_blank" rel="noopener noreferrer" class="category">
+<i class="fas fa-bolt"></i>
+Werize Partner
+</a>
+
+<a href="#finance" class="category">
+<i class="fas fa-money-bill-transfer"></i>
+Personal Loan
+</a>
+
+<a href="#finance" class="category">
+<i class="fas fa-building"></i>
+Business Loan
+</a>
+
+<a href="#finance" class="category">
+<i class="fas fa-house"></i>
+Home Loan
+</a>
+
+<a href="#au-account" class="category">
+<i class="fas fa-building-columns"></i>
+Bank Account
+</a>
+
+<a href="#services" class="category">
+<i class="fas fa-id-card"></i>
+PAN Card
+</a>
+
+<a href="#services" class="category">
+<i class="fas fa-store"></i>
+Shop Act
+</a>
+
+<a href="#services" class="category">
+<i class="fas fa-industry"></i>
+Udyam
+</a>
+
+<a href="#rental" class="category">
+<i class="fas fa-car"></i>
+Rental
+</a>
+
+</div>
+
+</div>
+
+
+
+
+<!-- WERIZE PARTNER QUICK STRIP -->
+<div class="werize-strip">
+  <div class="container werize-strip-inner">
+    <div class="werize-mini">
+      <span class="werize-mini-icon"><i class="fas fa-bolt"></i></span>
+      <div>
+        <strong>Personal Loan</strong>
+        <small>Apply online through Werize Partner</small>
+      </div>
+    </div>
+    <a class="werize-now" href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz" target="_blank" rel="noopener noreferrer">
+      Check Loan Offers <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</div>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="container hero-inner">
+
+<div class="hero-content">
+
+<span class="hero-label">
+ROYAL WEB SERVICES
+</span>
+
+<h1>
+Online Services<br>
+<span>Made Simple.</span>
+</h1>
+
+<p>
+Loans, Credit Cards, Bank Accounts, Government Online Services
+aur Website Development — sab ek hi jagah.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#finance" class="hero-btn primary">
+
+<i class="fas fa-arrow-down"></i>
+
+Explore Financial Offers
+
+</a>
+
+<a
+href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20I%20need%20help."
+target="_blank"
+class="hero-btn secondary">
+
+<i class="fab fa-whatsapp"></i>
+
+Chat With Us
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-image">
+
+<i class="fas fa-store"></i>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINANCIAL PRODUCTS
+===================================================== -->
+
+<section class="section" id="finance">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Financial <span>Products</span>
+</h2>
+
+<a href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz" target="_blank" rel="noopener noreferrer" class="view-all">
+Apply via Werize →
+</a>
+
+</div>
+
+
+<div class="finance-grid">
+
+
+<!-- CREDIT CARD -->
+<div class="finance-card">
+
+    <div class="finance-top credit">
+
+        <div class="finance-icon">
+            <i class="fas fa-credit-card"></i>
+        </div>
+
+        <h3>Credit Cards</h3>
+
+        <p>Compare popular credit card offers</p>
+
+    </div>
+
+    <div class="finance-body">
+
+        <ul>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Multiple card options
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Rewards & cashback benefits
+            </li>
+
+            <li>
+                <i class="fas fa-check"></i>
+                Easy online application
+            </li>
+
+        </ul>
+
+        <a
+            class="apply-btn"
+            href="credit-cards.html"
+            onclick="trackCreditCard('Credit Card Options')">
+
+            <i class="fas fa-arrow-right"></i>
+
+            Check Options
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- PERSONAL LOAN -->
+
+<div class="finance-card">
+
+<div class="finance-top personal">
+
+<div class="finance-icon">
+<i class="fas fa-money-bill-transfer"></i>
+</div>
+
+<h3>Personal Loan</h3>
+
+<p>Quick online application through our partner</p>
+
+</div>
+
+<div class="finance-body">
+
+<ul>
+
+<li>
+<i class="fas fa-check"></i>
+Personal finance options
+</li>
+
+<li>
+<i class="fas fa-check"></i>
+Document guidance
+</li>
+
+<li>
+<i class="fas fa-check"></i>
+Application assistance
+</li>
+
+</ul>
+
+<a class="apply-btn green" href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz" target="_blank" rel="noopener noreferrer" onclick="trackLoanClick()">
+<i class="fas fa-bolt"></i> Check Personal Loan
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- BUSINESS LOAN -->
+
+<div class="finance-card">
+
+<div class="finance-top business">
+
+<div class="finance-icon">
+<i class="fas fa-building"></i>
+</div>
+
+<h3>Business Loan</h3>
+
+<p>Finance options for businesses</p>
+
+</div>
+
+<div class="finance-body">
+
+<ul>
+
+<li>
+<i class="fas fa-check"></i>
+Business finance options
+</li>
+
+<li>
+<i class="fas fa-check"></i>
+Document assistance
+</li>
+
+<li>
+<i class="fas fa-check"></i>
+Eligibility guidance
+</li>
+
+</ul>
+
+<button
+class="apply-btn"
+onclick="openWhatsApp('Business Loan Enquiry')">
+
+<i class="fab fa-whatsapp"></i>
+
+Enquire Now
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- HOME LOAN -->
+
+<div class="finance-card">
+
+<div class="finance-top home">
+
+<div class="finance-icon">
+<i class="fas fa-house"></i>
+</div>
+
+<h3>Home Loan</h3>
+
+<p>Home finance assistance</p>
+
+</div>
+
+<div class="finance-body">
+
+<ul>
+
+<li>
+<i class="fas fa-check"></i>
+Home purchase finance
+</li>
+
+<li>
+<i class="fas fa-check"></i>
+Document guidance
+</li>
+
+<li>
+<i class="fas fa-check"></i>
+Application assistance
+</li>
+
+</ul>
+
+<button
+class="apply-btn"
+onclick="openWhatsApp('Home Loan Enquiry')">
+
+<i class="fab fa-whatsapp"></i>
+
+Enquire Now
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AU SMALL FINANCE BANK
+===================================================== -->
+
+<section class="au-banner" id="au-account">
+
+<div class="container au-inner">
+
+<div class="au-content">
+
+<span class="au-badge">
+BANK ACCOUNT OFFER
+</span>
+
+<h2>
+Open Your <span>AU Bank Account</span> Today!
+</h2>
+
+<p>
+Smart digital banking with convenient account access,
+digital banking features and applicable offers.
+</p>
+
+
+<div class="au-points">
+
+<div class="au-point">
+<i class="fas fa-percent"></i>
+Up to 6.75% p.a.* 
+</div>
+
+<div class="au-point">
+<i class="fas fa-gift"></i>
+Debit Card Offers*
+</div>
+
+<div class="au-point">
+<i class="fas fa-mobile-screen"></i>
+AU 0101 App
+</div>
+
+<div class="au-point">
+<i class="fas fa-bolt"></i>
+24x7 Fund Access
+</div>
+
+</div>
+
+
+<a
+href="https://leads.banksathi.com/?h=TEg0d1FTWHl2MWlHSEhVMXRqamhJUT09"
+target="_blank"
+rel="noopener noreferrer"
+class="au-btn"
+onclick="trackAUClick()">
+
+Open Account
+
+<i class="fas fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+
+<div class="au-visual">
+
+<i class="fas fa-building-columns"></i>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="section" id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Online <span>Services</span>
+</h2>
+
+<a href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz" target="_blank" rel="noopener noreferrer" class="view-all">
+Werize Partner →
+</a>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<!-- PAN -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-id-card"></i>
+</div>
+
+<h3>PAN Card</h3>
+
+<p>New PAN application assistance</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('PAN Card New Application')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- PAN UPDATE -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-id-card-clip"></i>
+</div>
+
+<h3>PAN Update</h3>
+
+<p>Name, DOB & detail correction</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('PAN Card Update / Correction')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- SHOP ACT -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-store"></i>
+</div>
+
+<h3>Shop Act</h3>
+
+<p>Business registration assistance</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('Shop Act Registration')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- SHOP RENEWAL -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-rotate"></i>
+</div>
+
+<h3>Shop Act Renewal</h3>
+
+<p>Renewal assistance</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('Shop Act Renewal')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- UDYAM -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-industry"></i>
+</div>
+
+<h3>Udyam</h3>
+
+<p>MSME registration assistance</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('Udyam Registration')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- VOTER -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-address-card"></i>
+</div>
+
+<h3>Voter ID</h3>
+
+<p>New voter application assistance</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('Voter ID Application')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- ESHRAM -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-person"></i>
+</div>
+
+<h3>E-Shram</h3>
+
+<p>Registration assistance</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('E-Shram Card')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- FSSAI -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-utensils"></i>
+</div>
+
+<h3>FSSAI</h3>
+
+<p>Food business registration</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('FSSAI Registration')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- JOB FORM -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-briefcase"></i>
+</div>
+
+<h3>Job Forms</h3>
+
+<p>Government & private forms</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('Job Form Application')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+<!-- ONLINE FORMS -->
+
+<div class="service-card">
+
+<div class="service-icon">
+<i class="fas fa-file-circle-check"></i>
+</div>
+
+<h3>Online Forms</h3>
+
+<p>Online form filling service</p>
+
+<button
+class="service-whatsapp"
+onclick="openWhatsApp('Online Form Filling')">
+
+<i class="fab fa-whatsapp"></i>
+Apply
+
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRUST
+===================================================== -->
+
+<div class="container">
+
+<div class="trust-strip">
+
+<div class="trust-grid">
+
+<div class="trust">
+
+<i class="fab fa-whatsapp"></i>
+
+<div>
+
+<h4>Direct WhatsApp</h4>
+
+<p>Easy communication</p>
+
+</div>
+
+</div>
+
+
+<div class="trust">
+
+<i class="fas fa-bolt"></i>
+
+<div>
+
+<h4>Quick Assistance</h4>
+
+<p>Fast response</p>
+
+</div>
+
+</div>
+
+
+<div class="trust">
+
+<i class="fas fa-file-circle-check"></i>
+
+<div>
+
+<h4>Document Guidance</h4>
+
+<p>Know what you need</p>
+
+</div>
+
+</div>
+
+
+<div class="trust">
+
+<i class="fas fa-headset"></i>
+
+<div>
+
+<h4>Customer Support</h4>
+
+<p>Help when required</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     RENTAL
+===================================================== -->
+
+<section class="section" id="rental">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Travel & <span>Rental</span>
+</h2>
+
+</div>
+
+
+<div class="rental-grid">
+
+
+<!-- CRUISER -->
+
+<div class="rental-card">
+
+<img
+src="Cluiser.jpeg"
+alt="AC Cruiser Rental">
+
+<div class="rental-info">
+
+<h3>AC Cruiser</h3>
+
+<ul>
+
+<li>
+<i class="fas fa-users"></i>
+14 Seater
+</li>
+
+<li>
+<i class="fas fa-snowflake"></i>
+Full AC
+</li>
+
+<li>
+<i class="fas fa-user-tie"></i>
+Driver Available
+</li>
+
+<li>
+<i class="fas fa-suitcase"></i>
+Large Luggage Space
+</li>
+
+</ul>
+
+<button
+class="rental-btn"
+onclick="openWhatsApp('AC Cruiser Booking')">
+
+<i class="fab fa-whatsapp"></i>
+Book Cruiser
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- DOST -->
+
+<div class="rental-card">
+
+<img
+src="Ertiga.jpeg"
+alt="Ashok Leyland Dost Loading Vehicle">
+
+<div class="rental-info">
+
+<h3>Ashok Leyland Dost</h3>
+
+<ul>
+
+<li>
+<i class="fas fa-truck"></i>
+Goods / Loading Vehicle
+</li>
+
+<li>
+<i class="fas fa-boxes-stacked"></i>
+Large Loading Space
+</li>
+
+<li>
+<i class="fas fa-road"></i>
+Local Transport
+</li>
+
+<li>
+<i class="fas fa-truck-moving"></i>
+Commercial Trips
+</li>
+
+</ul>
+
+<button
+class="rental-btn"
+onclick="openWhatsApp('Ashok Leyland Dost Booking')">
+
+<i class="fab fa-whatsapp"></i>
+Book Loading Vehicle
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
+
+<section class="section" id="portfolio">
+<div class="container">
+
+<div class="section-title">
+<h2>Website <span>Development</span></h2>
+<a href="https://sarkar-garage.vercel.app/" target="_blank" rel="noopener noreferrer" class="view-all">View Demo →</a>
+</div>
+
+<div class="website-sales-layout">
+
+<div class="website-sales-content">
+<span class="website-badge"><i class="fas fa-code"></i> BUSINESS WEBSITE DEVELOPMENT</span>
+
+<h2>Apne Business Ke Liye <span>Professional Website</span> Banwayein</h2>
+
+<p>Aapke shop, business ya service ke liye modern, responsive aur mobile-friendly website design & develop ki jaati hai.</p>
+
+<div class="website-features">
+
+<div><i class="fas fa-mobile-screen-button"></i><strong>Mobile Friendly</strong><small>Phone & desktop dono par perfect</small></div>
+<div><i class="fas fa-bolt"></i><strong>Fast & Modern</strong><small>Clean and professional design</small></div>
+<div><i class="fab fa-whatsapp"></i><strong>WhatsApp Integration</strong><small>Customers directly contact kar sake</small></div>
+<div><i class="fas fa-globe"></i><strong>Online Presence</strong><small>Business ko online grow karne mein help</small></div>
+
+</div>
+
+<div class="website-buttons">
+<a href="https://sarkar-garage.vercel.app/" target="_blank" rel="noopener noreferrer" class="website-demo-btn">
+<i class="fas fa-eye"></i> View Demo Website
+</a>
+<a href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20mujhe%20apne%20business%20ke%20liye%20website%20banwani%20hai." target="_blank" rel="noopener noreferrer" class="website-order-btn">
+<i class="fab fa-whatsapp"></i> Build My Website
+</a>
+</div>
+</div>
+
+<div class="website-demo-grid">
+
+<!-- SARKAR GARAGE -->
+<div class="website-demo-card">
+<div class="demo-browser-top">
+<span></span><span></span><span></span>
+<div>sarkar-garage.vercel.app</div>
+</div>
+
+<a href="https://sarkar-garage.vercel.app/" target="_blank" rel="noopener noreferrer" class="demo-preview">
+<div class="demo-icon"><i class="fas fa-motorcycle"></i></div>
+<strong>Sarkar Garage</strong>
+<small>Bike Garage Business Website</small>
+<span>Open Website →</span>
+</a>
+
+<div class="demo-label">
+<i class="fas fa-circle-check"></i>
+Business website demo by Royal Web Services
+</div>
+</div>
+
+<!-- MILEGA BHAI -->
+<div class="website-demo-card">
+<div class="demo-browser-top">
+<span></span><span></span><span></span>
+<div>milegabhai.vercel.app</div>
+</div>
+
+<a href="https://milegabhai.vercel.app/" target="_blank" rel="noopener noreferrer" class="milega-image-link">
+<img src="Screenshot (159).png" alt="Milega Bhai Website Screenshot" class="milega-screenshot">
+</a>
+
+<div class="demo-label">
+<i class="fas fa-circle-check"></i>
+Milega Bhai — E-commerce website demo
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="contact-section" id="contact">
+
+<div class="container contact-grid">
+
+
+<div class="contact-info">
+
+<span style="
+color:#2874f0;
+font-size:12px;
+font-weight:700;
+">
+GET IN TOUCH
+</span>
+
+<h2>
+Need Help?
+<span>Let's Talk.</span>
+</h2>
+
+<p>
+Loan, credit card, bank account, government service
+ya website development ke liye WhatsApp par directly
+message karein.
+</p>
+
+
+<div class="contact-buttons">
+
+<a
+href="https://wa.me/917387304707"
+target="_blank"
+class="contact-btn whatsapp">
+
+<i class="fab fa-whatsapp"></i>
+Chat on WhatsApp
+
+</a>
+
+
+<a
+href="tel:+917387304707"
+class="contact-btn call">
+
+<i class="fas fa-phone"></i>
+Call Now
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<form class="enquiry" id="contactForm">
+
+<h3>
+Quick Enquiry
+</h3>
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="tel"
+id="mobile"
+placeholder="Your Mobile Number"
+required>
+
+<textarea
+id="message"
+placeholder="What service do you need?"
+required></textarea>
+
+<button type="submit">
+
+<i class="fab fa-whatsapp"></i>
+
+Send on WhatsApp
+
+</button>
+
+</form>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DISCLAIMER
+===================================================== -->
+
+<div class="container">
+
+<div class="disclaimer">
+
+<strong>Important:</strong>
+Loan, credit card and financial product approval, interest rates,
+fees, limits and eligibility are subject to the respective
+bank/NBFC/card issuer's policies and applicant eligibility.
+Royal Web Services does not guarantee approval or a specific
+loan amount/rate. Offers and rates may change from time to time.
+Please verify applicable terms before applying.
+
+<br><br>
+
+*AU Small Finance Bank account offer details, interest rates and
+benefits are subject to the applicable product terms, eligibility
+and current bank offers.
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="footer-logo">
+
+<img
+src="logo.png"
+alt="Royal Web Services">
+
+</div>
+
+<p>
+Online Services • Financial Product Assistance •
+Website Development • Digital Assistance
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Popular Services</h4>
+
+<ul class="footer-links">
+
+<li>
+<a href="#finance">Credit Cards</a>
+</li>
+
+<li>
+<a href="#finance">Personal Loan</a>
+</li>
+
+<li>
+<a href="#finance">Business Loan</a>
+</li>
+
+<li>
+<a href="#finance">Home Loan</a>
+</li>
+
+<li>
+<a href="#services">PAN Card</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Connect With Us</h4>
+
+<div class="footer-social">
+
+<a
+href="https://wa.me/917387304707"
+target="_blank"
+class="wa">
+
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+
+</a>
+
+<a
+href="https://www.instagram.com/royal_website_122/"
+target="_blank"
+class="ig">
+
+<i class="fab fa-instagram"></i>
+Instagram
+
+</a>
+
+<a
+href="mailto:shaikhafaroz841@gmail.com"
+class="mail">
+
+<i class="fas fa-envelope"></i>
+Email
+
+</a>
+
+</div>
+
+<br>
+
+<p>
+<i class="fas fa-phone"></i>
++91 73873 04707
+</p>
+
+<p>
+<i class="fas fa-envelope"></i>
+shaikhafaroz841@gmail.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Royal Web Services. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a
+href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20I%20need%20help."
+target="_blank"
+class="floating-whatsapp"
+aria-label="Chat on WhatsApp">
+
+<i class="fab fa-whatsapp"></i>
+
+<span>Chat</span>
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const whatsappNumber = "917387304707";
+
+
+/* =====================================================
+   WHATSAPP SERVICE
+===================================================== */
+
+function openWhatsApp(service){
+
+    const message =
+`Hello Royal Web Services 👋
+
+Mujhe "${service}" ke regarding information chahiye.
+
+Please mujhe eligibility, required documents, charges/process aur available options bata dijiye.
+
+Thank you.`;
+
+    const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+    window.open(url,"_blank");
+}
+
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const mobile =
+    document.getElementById("mobile").value.trim();
+
+    const message =
+    document.getElementById("message").value.trim();
+
+
+    const whatsappMessage =
+`Hello Royal Web Services 👋
+
+Name: ${name}
+
+Mobile: ${mobile}
+
+Requirement:
+${message}
+
+Please contact me regarding this service.`;
+
+    const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(whatsappMessage);
+
+    window.open(url,"_blank");
+
+});
+
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function searchServices(){
+
+    const input =
+    document
+    .getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+    if(!input){
+        alert("Please search for a service.");
+        return;
+    }
+
+    const text =
+    document.body.innerText.toLowerCase();
+
+    if(text.includes(input)){
+
+        const sections =
+        document.querySelectorAll(
+            ".finance-card, .service-card"
+        );
+
+        let found = false;
+
+        sections.forEach(card => {
+
+            if(
+                card.innerText
+                .toLowerCase()
+                .includes(input)
+            ){
+
+                card.scrollIntoView({
+                    behavior:"smooth",
+                    block:"center"
+                });
+
+                card.style.boxShadow =
+                "0 0 0 3px #2874f0";
+
+                setTimeout(() => {
+
+                    card.style.boxShadow = "";
+
+                },2500);
+
+                found = true;
+            }
+
+        });
+
+        if(!found){
+
+            document
+            .getElementById("finance")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
+    }else{
+
+        alert(
+        "Service nahi mila. WhatsApp par enquiry karein."
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   CREDIT CARD TRACKING
+===================================================== */
+
+function trackCreditCard(cardName){
+
+    if(typeof gtag === "function"){
+
+        gtag(
+            "event",
+            "credit_card_click",
+            {
+                event_category:"financial_product",
+                event_label:cardName
+            }
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   AU TRACKING
+===================================================== */
+
+function trackAUClick(){
+
+    if(typeof gtag === "function"){
+
+        gtag(
+            "event",
+            "au_account_click",
+            {
+                event_category:"financial_product",
+                event_label:"AU Small Finance Bank Account"
+            }
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   LOAN TRACKING
+===================================================== */
+
+function trackLoanClick(){
+
+    if(typeof gtag === "function"){
+
+        gtag(
+            "event",
+            "loan_click",
+            {
+                event_category:"financial_product",
+                event_label:"Loan Application"
+            }
+        );
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
