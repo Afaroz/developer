@@ -1677,16 +1677,6 @@ placeholder="Search for services, loans, credit cards..."
 <div class="header-actions">
 
 <a
-href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz"
-target="_blank"
-rel="noopener noreferrer"
-class="header-btn"
-style="background:#ffe500;color:#172337;">
-<i class="fas fa-bolt"></i>
-Werize Partner
-</a>
-
-<a
 href="https://wa.me/917387304707"
 target="_blank"
 class="header-btn whatsapp">
@@ -1829,13 +1819,14 @@ Explore Financial Offers
 </a>
 
 <a
-href="https://wa.me/917387304707?text=Hello%20Royal%20Web%20Services%2C%20I%20need%20help."
+href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz"
 target="_blank"
+rel="noopener noreferrer"
 class="hero-btn secondary">
 
-<i class="fab fa-whatsapp"></i>
+<i class="fas fa-bolt"></i>
 
-Chat With Us
+Werize Partner
 
 </a>
 
@@ -1970,8 +1961,12 @@ Application assistance
 
 </ul>
 
-<a class="apply-btn green" href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz" target="_blank" rel="noopener noreferrer" onclick="trackLoanClick()">
-<i class="fas fa-bolt"></i> Check Personal Loan
+<a class="apply-btn green"
+   href="personal-loan.html"
+   target="_blank"
+   rel="noopener noreferrer"
+   onclick="trackLoanClick()">
+    <i class="fas fa-bolt"></i> Check Personal Loan
 </a>
 
 </div>
@@ -2107,47 +2102,35 @@ Enquire Now
 BANK ACCOUNT OFFER
 </span>
 
-<h2>
-Open Your <span>AU Bank Account</span> Today!
-</h2>
+<h2>🏦 Bank Account Opening</h2>
 
-<p>
-Smart digital banking with convenient account access,
-digital banking features and applicable offers.
+<div class="bank-account-content">
+
+<p style="font-size:15px;font-weight:600;margin-bottom:12px;">
+Apna Bank Account aasani se open karwayein!
 </p>
-
 
 <div class="au-points">
 
-<div class="au-point">
-<i class="fas fa-percent"></i>
-Up to 6.75% p.a.* 
-</div>
-
-<div class="au-point">
-<i class="fas fa-gift"></i>
-Debit Card Offers*
-</div>
-
-<div class="au-point">
-<i class="fas fa-mobile-screen"></i>
-AU 0101 App
-</div>
-
-<div class="au-point">
-<i class="fas fa-bolt"></i>
-24x7 Fund Access
-</div>
+<div class="au-point">✅ Savings Account</div>
+<div class="au-point">✅ Current Account</div>
+<div class="au-point">✅ Zero Balance Account – <em>Eligibility ke anusaar</em></div>
+<div class="au-point">✅ Account Opening Assistance</div>
+<div class="au-point">✅ KYC &amp; Document Support</div>
 
 </div>
 
+<p style="font-size:13px;font-weight:700;margin-top:8px;">
+📄 Required Documents: Aadhaar Card + PAN Card + Mobile Number
+</p>
+
+</div>
 
 <a
-href="https://leads.banksathi.com/?h=TEg0d1FTWHl2MWlHSEhVMXRqamhJUT09"
+href="bank-account.html"
 target="_blank"
 rel="noopener noreferrer"
-class="au-btn"
-onclick="trackAUClick()">
+class="au-btn">
 
 Open Account
 
@@ -2918,6 +2901,37 @@ Website Development • Digital Assistance
 
 <div>
 
+<h4>Instant Services</h4>
+
+<ul class="footer-links">
+
+<li>
+<a href="#finance">Shop Act</a>
+</li>
+
+<li>
+<a href="#finance">Udyam Registration</a>
+</li>
+
+<li>
+<a href="#finance">E-Sharm Card</a>
+</li>
+
+<li>
+<a href="#finance">Maha Id Card</a>
+</li>
+
+<li>
+<a href="#services">Ayushman bharat</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
 <h4>Connect With Us</h4>
 
 <div class="footer-social">
@@ -3079,84 +3093,348 @@ Please contact me regarding this service.`;
 });
 
 
-
 /* =====================================================
-   SEARCH
+   GLOBAL SEARCH
+   INDEX + PERSONAL LOAN + CREDIT CARD
 ===================================================== */
 
 function searchServices(){
 
     const input =
-    document
-    .getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
 
     if(!input){
+
         alert("Please search for a service.");
         return;
+
     }
 
-    const text =
-    document.body.innerText.toLowerCase();
 
-    if(text.includes(input)){
+    /* =================================================
+       1. CURRENT INDEX PAGE SEARCH
+    ================================================= */
 
-        const sections =
+    const sections =
         document.querySelectorAll(
             ".finance-card, .service-card"
         );
 
-        let found = false;
+    let foundCurrent = false;
 
-        sections.forEach(card => {
 
-            if(
-                card.innerText
-                .toLowerCase()
-                .includes(input)
-            ){
+    sections.forEach(card => {
 
-                card.scrollIntoView({
-                    behavior:"smooth",
-                    block:"center"
-                });
+        const cardText =
+            card.innerText
+            .toLowerCase();
 
-                card.style.boxShadow =
+        if(cardText.includes(input)){
+
+            card.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+
+            card.style.boxShadow =
                 "0 0 0 3px #2874f0";
 
-                setTimeout(() => {
 
-                    card.style.boxShadow = "";
+            setTimeout(() => {
 
-                },2500);
+                card.style.boxShadow = "";
 
-                found = true;
-            }
+            },2500);
 
-        });
 
-        if(!found){
-
-            document
-            .getElementById("finance")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
+            foundCurrent = true;
 
         }
 
-    }else{
+    });
 
-        alert(
-        "Service nahi mila. WhatsApp par enquiry karein."
-        );
+
+    if(foundCurrent){
+
+        return;
 
     }
 
-}
 
+    /* =================================================
+       2. PERSONAL LOAN - COMPLETE SEARCH INDEX
+    ================================================= */
+
+    const personalLoanData = [
+
+        /* Page */
+        "personal loan",
+        "personal loans",
+        "loan",
+        "loan offer",
+        "loan offers",
+        "apply personal loan",
+        "online loan",
+        "digital loan",
+        "instant loan",
+        "loan application",
+        "emi",
+        "repayment",
+        "collateral",
+        "collateral free",
+        "minimal documentation",
+        "digital process",
+
+        /* MY Money Bazar */
+        "my money bazar",
+        "my money",
+        "money bazar",
+        "mymoneybazar",
+        "30000",
+        "30,000",
+
+        /* Bajaj */
+        "bajaj finserv",
+        "bajaj",
+        "15 lakh",
+        "15,00,000",
+        "1500000",
+
+        /* IDFC */
+        "idfc first",
+        "idfc",
+        "10 lakh",
+        "10,00,000",
+        "1000000",
+
+        /* Unity */
+        "unity sfb",
+        "unity",
+        "5 lakh",
+        "5,00,000",
+        "500000",
+
+        /* Cashvia */
+        "cashvia",
+
+        /* B4Salary */
+        "b4salary",
+        "b4 salary",
+        "1 lakh",
+        "1,00,000",
+        "100000",
+
+        /* Hero */
+        "hero instant",
+        "hero fincorp",
+        "hero",
+
+        /* GetCred */
+        "getcred",
+
+        /* Common */
+        "approval",
+        "loan amount",
+        "tenure",
+        "processing fee",
+        "eligibility",
+        "online application",
+        "loan partner"
+
+    ];
+
+
+    const personalLoanMatch =
+        personalLoanData.some(keyword =>
+            keyword.includes(input) ||
+            input.includes(keyword)
+        );
+
+
+    if(personalLoanMatch){
+
+        window.location.href =
+            "personal-loan.html";
+
+        return;
+
+    }
+
+
+    /* =================================================
+       3. CREDIT CARD - COMPLETE SEARCH INDEX
+    ================================================= */
+
+    const creditCardData = [
+
+        /* Page */
+        "credit card",
+        "credit cards",
+        "creditcard",
+        "card",
+        "apply credit card",
+        "credit card offers",
+        "card offers",
+
+        /* SBI */
+        "sbi",
+        "sbi credit card",
+        "state bank",
+        "rewards",
+        "reward points",
+        "sbi rewards",
+        "dining",
+        "travel",
+        "lifestyle",
+        "exclusive discounts",
+        "cashback",
+
+        /* Flipkart Axis */
+        "flipkart axis",
+        "flipkart",
+        "axis",
+        "flipkart axis bank",
+        "axis bank",
+        "shopping",
+        "shopping cashback",
+        "cash back",
+        "fuel",
+        "dining offers",
+        "travel benefits",
+        "lounge benefits",
+
+        /* AU Bank */
+        "au bank",
+        "au",
+        "au bank credit card",
+        "au rewards",
+        "au lifestyle",
+        "au travel",
+
+        /* HDFC */
+        "hdfc",
+        "hdfc bank",
+        "hdfc credit card",
+        "welcome benefits",
+        "hdfc cashback",
+        "partner offers",
+        "hdfc lounge",
+        "shopping benefits",
+
+        /* Common credit card terms */
+        "cashback",
+        "cash back",
+        "reward",
+        "rewards",
+        "reward points",
+        "lounge",
+        "lounge access",
+        "fuel",
+        "travel",
+        "dining",
+        "shopping",
+        "lifestyle",
+        "discount",
+        "discounts",
+        "benefits",
+        "annual fee",
+        "joining fee",
+        "credit card application",
+        "apply now"
+
+    ];
+
+
+    const creditCardMatch =
+        creditCardData.some(keyword =>
+            keyword.includes(input) ||
+            input.includes(keyword)
+        );
+
+
+    if(creditCardMatch){
+
+        window.location.href =
+            "credit-cards.html";
+
+        return;
+
+    }
+
+
+    /* =================================================
+       4. BANK ACCOUNT PAGE
+       (Tumhare existing account page ke liye)
+    ================================================= */
+
+    const bankAccountData = [
+
+        "bank account",
+        "bank account opening",
+        "savings account",
+        "account opening",
+        "open account",
+        "zero balance",
+        "kotak",
+        "kotak mahindra",
+        "kotak 811",
+        "kotak 811 zero balance",
+        "kotak super savings",
+        "idfc first bank savings",
+        "idfc first savings",
+        "dbs",
+        "dbs digibank",
+        "digital savings",
+        "cashback",
+        "debit card",
+        "platinum debit card",
+        "interest",
+        "atm",
+        "insurance",
+        "upi",
+        "imps",
+        "neft",
+        "rtgs",
+        "mutual fund",
+        "pre-approved loan",
+        "kyc",
+        "account benefits"
+
+    ];
+
+
+    const bankAccountMatch =
+        bankAccountData.some(keyword =>
+            keyword.includes(input) ||
+            input.includes(keyword)
+        );
+
+
+    if(bankAccountMatch){
+
+        window.location.href =
+            "bank-account.html";
+
+        return;
+
+    }
+
+
+    /* =================================================
+       5. NOT FOUND
+    ================================================= */
+
+    alert(
+        "Service nahi mila. WhatsApp par enquiry karein."
+    );
+
+}
 
 
 /* =====================================================

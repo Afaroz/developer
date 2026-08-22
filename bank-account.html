@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Royal Web Services - Compare bank account offers and start your online account opening journey.">
+<title>Bank Account Opening | Royal Web Services</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    color:#172337;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+:root{
+    --blue:#2874f0;
+    --dark:#101828;
+    --yellow:#ffe500;
+    --green:#20b76b;
+    --muted:#697586;
+    --line:#e5eaf1;
+}
+
+.top-strip{
+    background:#0d1728;
+    color:#fff;
+    font-size:10px;
+    padding:8px 15px;
+}
+.top-strip-inner{
+    max-width:1120px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+.top-strip b{color:var(--yellow)}
+
+.header{
+    background:linear-gradient(90deg,#1d5fd1,#2874f0);
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 18px rgba(0,0,0,.16);
+}
+.header-inner{
+    max-width:1120px;
+    min-height:62px;
+    margin:auto;
+    padding:0 15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+.logo{
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:.3px;
+}
+.logo span{color:var(--yellow)}
+.back-btn{
+    background:#fff;
+    color:var(--blue);
+    padding:8px 13px;
+    border-radius:5px;
+    font-size:10px;
+    font-weight:800;
+}
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 82% 22%,rgba(255,229,0,.18),transparent 22%),
+      radial-gradient(circle at 10% 90%,rgba(55,210,255,.13),transparent 28%),
+      linear-gradient(135deg,#092e73,#1760d4 56%,#2874f0);
+    color:#fff;
+}
+.hero-inner{
+    max-width:1120px;
+    margin:auto;
+    min-height:365px;
+    padding:48px 15px 58px;
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    align-items:center;
+    gap:35px;
+}
+.hero-content{position:relative;z-index:2}
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    padding:7px 11px;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.22);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.6px;
+}
+.hero h1{
+    font-size:42px;
+    line-height:1.08;
+    margin:14px 0 12px;
+}
+.hero h1 span{color:var(--yellow)}
+.hero p{
+    max-width:650px;
+    color:#e8f0ff;
+    font-size:12px;
+    line-height:1.75;
+}
+.hero-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:18px;
+}
+.hero-pills span{
+    padding:7px 9px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:5px;
+    font-size:9px;
+    font-weight:700;
+}
+.hero-side{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+}
+.phone-card{
+    width:270px;
+    background:#fff;
+    color:var(--dark);
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 22px 50px rgba(0,0,0,.23);
+    transform:rotate(2deg);
+}
+.phone-icon{
+    width:68px;height:68px;
+    margin:0 auto 12px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#eaf2ff,#dbe9ff);
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+}
+.phone-card h3{font-size:17px}
+.phone-card p{font-size:9px;color:var(--muted);margin-top:4px}
+.phone-card .secure{
+    margin-top:14px;
+    padding:8px;
+    border-radius:6px;
+    background:#edfff5;
+    color:#16834a;
+    font-size:9px;
+    font-weight:800;
+}
+.float-shape{
+    position:absolute;
+    width:300px;height:300px;
+    border:55px solid rgba(255,255,255,.06);
+    border-radius:50%;
+    right:-120px;
+    bottom:-190px;
+}
+
+.container{max-width:1120px;margin:auto;padding:0 15px}
+
+.intro-card{
+    margin-top:-25px;
+    position:relative;
+    z-index:5;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:11px;
+    padding:16px 18px;
+    box-shadow:0 10px 30px rgba(25,48,80,.10);
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+.intro-icon{
+    width:42px;height:42px;flex:0 0 42px;
+    background:#fff6cc;
+    color:#b47d00;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.intro-card strong{font-size:12px}
+.intro-card p{font-size:9px;color:var(--muted);margin-top:2px}
+
+.section-title{
+    text-align:center;
+    padding:38px 0 18px;
+}
+.section-title small{
+    color:var(--blue);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1.2px;
+}
+.section-title h2{
+    font-size:27px;
+    margin:4px 0;
+}
+.section-title p{
+    color:var(--muted);
+    font-size:10px;
+}
+
+.offers{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:17px;
+    padding-bottom:25px;
+}
+
+.offer{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(25,48,80,.06);
+    transition:.28s ease;
+    position:relative;
+}
+.offer:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 38px rgba(25,48,80,.14);
+}
+.offer.featured{border:2px solid var(--blue)}
+.offer-ribbon{
+    position:absolute;
+    top:13px;
+    right:13px;
+    z-index:3;
+    background:var(--yellow);
+    color:#172337;
+    padding:5px 8px;
+    border-radius:20px;
+    font-size:7px;
+    font-weight:900;
+}
+.offer-head{
+    color:#fff;
+    min-height:143px;
+    padding:20px;
+    position:relative;
+    overflow:hidden;
+}
+.offer-head:after{
+    content:"";
+    position:absolute;
+    width:170px;height:170px;
+    border:32px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    right:-70px;
+    top:-95px;
+}
+.kotak-zero{background:linear-gradient(135deg,#571676,#9a3bc4)}
+.kotak-super{background:linear-gradient(135deg,#123c78,#2874f0)}
+.idfc{background:linear-gradient(135deg,#ad1823,#e6503a)}
+.dbs{background:linear-gradient(135deg,#c52e2e,#f05d42)}
+.bank-name{
+    position:relative;
+    z-index:1;
+    font-size:16px;
+    font-weight:800;
+}
+.offer-tag{
+    position:relative;
+    z-index:1;
+    display:inline-block;
+    margin-top:7px;
+    padding:4px 7px;
+    border-radius:20px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.22);
+    font-size:7px;
+    font-weight:800;
+}
+.offer-head h3{
+    position:relative;
+    z-index:1;
+    font-size:17px;
+    margin-top:12px;
+}
+.offer-body{padding:17px}
+.offer-body h4{font-size:12px;margin-bottom:8px}
+.benefits{list-style:none}
+.benefits li{
+    display:flex;
+    gap:8px;
+    padding:6px 0;
+    border-bottom:1px solid #f0f2f5;
+    font-size:9.5px;
+    color:#566170;
+}
+.benefits li:last-child{border-bottom:0}
+.benefits i{color:var(--green);margin-top:2px}
+.open-btn{
+    width:100%;
+    margin-top:13px;
+    border:0;
+    background:linear-gradient(90deg,#2874f0,#1554c4);
+    color:#fff;
+    padding:12px;
+    border-radius:6px;
+    font-size:10px;
+    font-weight:900;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    transition:.2s;
+}
+.open-btn:hover{
+    box-shadow:0 8px 18px rgba(40,116,240,.28);
+    transform:translateY(-2px);
+}
+.open-btn i{transition:.2s}
+.open-btn:hover i{transform:translateX(4px)}
+.offer-note{
+    text-align:center;
+    margin-top:7px;
+    color:#8a93a0;
+    font-size:7.5px;
+}
+
+.trust{
+    margin:10px 0 35px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px;
+}
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+.trust-item{
+    text-align:center;
+    padding:10px 5px;
+}
+.trust-item i{
+    color:var(--blue);
+    font-size:20px;
+    margin-bottom:7px;
+}
+.trust-item strong{display:block;font-size:10px}
+.trust-item span{font-size:8px;color:var(--muted)}
+
+.compare{
+    margin-bottom:38px;
+}
+.compare-box{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px;
+}
+.compare-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+}
+.compare-item{
+    background:#f7f9fc;
+    border-radius:8px;
+    padding:12px 7px;
+    text-align:center;
+}
+.compare-item strong{font-size:10px;display:block}
+.compare-item span{font-size:8px;color:var(--blue);font-weight:800}
+
+.steps{
+    padding-bottom:35px;
+}
+.steps-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+.step{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px 12px;
+    text-align:center;
+}
+.step-number{
+    width:34px;height:34px;
+    margin:0 auto 9px;
+    border-radius:50%;
+    background:#eaf2ff;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:900;
+}
+.step h4{font-size:11px}
+.step p{font-size:8.5px;color:var(--muted);margin-top:3px}
+
+.disclaimer{
+    background:#fff8e1;
+    border:1px solid #ffe082;
+    border-radius:8px;
+    color:#665500;
+    padding:12px;
+    font-size:8px;
+    line-height:1.65;
+    margin-bottom:75px;
+}
+.disclaimer b{font-size:9px}
+
+.footer{
+    background:#101828;
+    color:#fff;
+    text-align:center;
+    padding:25px 15px 75px;
+}
+.footer strong{font-size:14px}
+.footer p{font-size:8px;color:#aeb7c5;margin-top:4px}
+
+.bottom-cta{
+    position:fixed;
+    z-index:2000;
+    bottom:13px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(540px,calc(100% - 22px));
+    background:#101828;
+    color:#fff;
+    padding:9px;
+    border-radius:11px;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    box-shadow:0 12px 35px rgba(0,0,0,.3);
+}
+.bottom-icon{
+    width:35px;height:35px;flex:0 0 35px;
+    border-radius:7px;
+    background:var(--yellow);
+    color:#172337;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.bottom-text{flex:1}
+.bottom-text strong{font-size:9px;display:block}
+.bottom-text small{font-size:7px;color:#aeb7c5}
+.bottom-cta a{
+    background:#25d366;
+    color:#fff;
+    padding:9px 11px;
+    border-radius:6px;
+    font-size:8px;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+@media(max-width:800px){
+    .hero-inner{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+    .hero-side{justify-content:flex-start}
+}
+@media(max-width:600px){
+    .top-strip-inner{justify-content:center}
+    .top-strip-inner span{display:none}
+    .header-inner{min-height:56px}
+    .logo{font-size:14px}
+    .back-btn{font-size:8px;padding:7px 9px}
+    .hero-inner{padding:36px 15px 50px}
+    .hero h1{font-size:29px}
+    .hero p{font-size:10px}
+    .phone-card{width:235px}
+    .container{padding:0 12px}
+    .intro-card{padding:12px}
+    .intro-card p{font-size:8px}
+    .section-title{padding:30px 0 15px}
+    .section-title h2{font-size:23px}
+    .offers{grid-template-columns:1fr;gap:12px}
+    .offer-head{min-height:130px}
+    .trust-grid{grid-template-columns:1fr 1fr}
+    .compare-grid{grid-template-columns:1fr 1fr}
+    .steps-grid{grid-template-columns:1fr}
+    .bottom-text{display:none}
+    .bottom-cta{justify-content:space-between}
+    .bottom-cta a{flex:1;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-strip">
+    <div class="top-strip-inner">
+        <strong>⚡ Bank Account Opening Assistance</strong>
+        <span>Compare offers • Choose your account • Start online</span>
+    </div>
+</div>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">ROYAL <span>WEB SERVICES</span></a>
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Website</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="float-shape"></div>
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-building-columns"></i>
+                BANK ACCOUNT OPENING
+            </div>
+            <h1>Apna <span>Bank Account</span><br>Ghar Baithe Open Karein</h1>
+            <p>
+                Aapki requirement ke hisaab se available account offers compare karein.
+                Suitable offer choose karke official partner application page par directly proceed karein.
+            </p>
+
+            <div class="hero-pills">
+                <span>✓ Multiple Account Options</span>
+                <span>✓ Online Application</span>
+                <span>✓ Easy Process</span>
+                <span>✓ KYC Guidance</span>
+            </div>
+        </div>
+
+        <div class="hero-side">
+            <div class="phone-card">
+                <div class="phone-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                <h3>Open From Home</h3>
+                <p>Mobile se offer select karein aur application start karein.</p>
+                <div class="secure">
+                    <i class="fas fa-shield-halved"></i>
+                    Partner Application Link
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+<div class="container">
+
+    <div class="intro-card">
+        <div class="intro-icon"><i class="fas fa-circle-info"></i></div>
+        <div>
+            <strong>Kaunsa account choose karein?</strong>
+            <p>Niche available 4 offers dekhein aur jo aapko suitable lage uske <b>Open Now</b> button par click karein.</p>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <small>FEATURED BANKING OFFERS</small>
+        <h2>Choose Your Account</h2>
+        <p>Compare the available options and start your application.</p>
+    </div>
+
+    <section class="offers">
+
+        <article class="offer featured">
+            <div class="offer-ribbon">⭐ POPULAR</div>
+            <div class="offer-head kotak-zero">
+                <div class="bank-name">Kotak Mahindra Bank</div>
+                <div class="offer-tag">811 ZERO BALANCE</div>
+                <h3>Kotak 811 Zero Balance Account</h3>
+            </div>
+            <div class="offer-body">
+                <h4>💰 Key Benefits</h4>
+                <ul class="benefits">
+                    <li><i class="fas fa-check-circle"></i><span>Zero Balance Savings Account</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Up to ₹6,000 cashback on transactions</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Premium Platinum Debit Card</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Earn up to 7% interest on savings*</span></li>
+                </ul>
+                <a class="open-btn" href="https://leads.banksathi.com/?h=LzV6QUZSUklvZjlYejVCUjNPTFo4Zz09" target="_blank" rel="noopener noreferrer" onclick="trackOffer('Kotak 811 Zero Balance')">
+                    Open Account Now <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="offer-note">Opens partner application in a new tab</div>
+            </div>
+        </article>
+
+        <article class="offer">
+            <div class="offer-head kotak-super">
+                <div class="bank-name">Kotak Mahindra Bank</div>
+                <div class="offer-tag">SUPER SAVINGS</div>
+                <h3>Kotak 811 Super Savings Account</h3>
+            </div>
+            <div class="offer-body">
+                <h4>🌟 Key Benefits</h4>
+                <ul class="benefits">
+                    <li><i class="fas fa-check-circle"></i><span>Up to ₹6,000 cashback on debit card spends*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Free Platinum Debit Card</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>ATM withdrawal limit up to ₹1 lakh/day*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Insurance cover up to ₹80 lakh*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Dedicated customer support</span></li>
+                </ul>
+                <a class="open-btn" href="https://leads.banksathi.com/?h=RHRYc1pydVFGVkRMTlFRMW55cUxPdz09" target="_blank" rel="noopener noreferrer" onclick="trackOffer('Kotak 811 Super Savings')">
+                    Open Account Now <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="offer-note">Opens partner application in a new tab</div>
+            </div>
+        </article>
+
+        <article class="offer">
+            <div class="offer-head idfc">
+                <div class="bank-name">IDFC FIRST Bank</div>
+                <div class="offer-tag">SAVINGS ACCOUNT</div>
+                <h3>IDFC FIRST Bank Savings Account</h3>
+            </div>
+            <div class="offer-body">
+                <h4>✨ Key Benefits</h4>
+                <ul class="benefits">
+                    <li><i class="fas fa-check-circle"></i><span>Interest rates up to 6.5% p.a.*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Free & unlimited ATM withdrawals*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Rewards and cashback on transactions</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Accidental insurance & lost card cover*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Pre-approved loan offers*</span></li>
+                </ul>
+                <a class="open-btn" href="https://leads.banksathi.com/?h=N2dMOG1sOS92Z2pzZVpVRzFzdk9lUT09" target="_blank" rel="noopener noreferrer" onclick="trackOffer('IDFC FIRST Bank Savings')">
+                    Open Account Now <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="offer-note">Opens partner application in a new tab</div>
+            </div>
+        </article>
+
+        <article class="offer">
+            <div class="offer-head dbs">
+                <div class="bank-name">DBS digibank</div>
+                <div class="offer-tag">DIGITAL SAVINGS</div>
+                <h3>DBS digibank Savings Account</h3>
+            </div>
+            <div class="offer-body">
+                <h4>🚀 Key Benefits</h4>
+                <ul class="benefits">
+                    <li><i class="fas fa-check-circle"></i><span>Earn up to 5.5% p.a. on savings*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>₹300 welcome cashback*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>24x7 UPI, IMPS, NEFT & RTGS transfers*</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Mutual fund investment access</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Quick loans & health insurance access*</span></li>
+                </ul>
+                <a class="open-btn" href="https://leads.banksathi.com/?h=Rk1tYzdRb1YxaHRudFNjbWV1eko5QT09" target="_blank" rel="noopener noreferrer" onclick="trackOffer('DBS digibank Savings')">
+                    Open Account Now <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="offer-note">Opens partner application in a new tab</div>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="trust">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <i class="fas fa-layer-group"></i>
+                <strong>4 Options</strong>
+                <span>Compare offers</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-mobile-screen"></i>
+                <strong>Online Process</strong>
+                <span>Apply from mobile</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-bolt"></i>
+                <strong>Easy Start</strong>
+                <span>Quick application</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-file-shield"></i>
+                <strong>KYC Guidance</strong>
+                <span>Document support</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="compare">
+        <div class="section-title" style="padding:0 0 14px">
+            <small>QUICK VIEW</small>
+            <h2>Which One Fits You?</h2>
+        </div>
+        <div class="compare-box">
+            <div class="compare-grid">
+                <div class="compare-item"><strong>Kotak 811</strong><span>Zero Balance</span></div>
+                <div class="compare-item"><strong>Kotak Super</strong><span>Cashback</span></div>
+                <div class="compare-item"><strong>IDFC FIRST</strong><span>Up to 6.5%*</span></div>
+                <div class="compare-item"><strong>DBS digibank</strong><span>Digital Banking</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="section-title" style="padding-top:0">
+            <small>SIMPLE PROCESS</small>
+            <h2>3 Easy Steps</h2>
+        </div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">01</div>
+                <h4>Choose Account</h4>
+                <p>Apni need ke according offer select karein.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">02</div>
+                <h4>Click Open Now</h4>
+                <p>Partner application page new tab mein open hoga.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">03</div>
+                <h4>Complete KYC</h4>
+                <p>Partner/bank ke instructions follow karein.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="disclaimer">
+        <b>📌 Important:</b>
+        Benefits, cashback, interest rates, limits, insurance and eligibility may change and are subject to the respective bank/partner's latest terms and conditions.
+        Account opening approval is not guaranteed. Please review the final offer details on the partner/bank page before proceeding.
+    </div>
+
+</div>
+</main>
+
+<footer class="footer">
+    <strong>ROYAL WEB SERVICES</strong>
+    <p>Bank Account Opening Assistance • Online Services • Digital Support</p>
+</footer>
+
+<div class="bottom-cta">
+    <div class="bottom-icon"><i class="fas fa-building-columns"></i></div>
+    <div class="bottom-text">
+        <strong>Ready to open your account?</strong>
+        <small>Choose an offer and start online.</small>
+    </div>
+    <a href="#offers" onclick="document.querySelector('.offers').scrollIntoView({behavior:'smooth'});return false;">
+        View Offers <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+<script>
+function trackOffer(name){
+    try{
+        localStorage.setItem('lastAccountOffer',name);
+        localStorage.setItem('lastAccountOfferTime',new Date().toISOString());
+        if(typeof gtag==='function'){
+            gtag('event','account_offer_click',{
+                event_category:'Bank Account',
+                event_label:name
+            });
+        }
+    }catch(e){}
+}
+</script>
+
+<!-- Existing Google Analytics ID from the provided page -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPXV03J7HS"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-CPXV03J7HS');
+</script>
+
+</body>
+</html>
