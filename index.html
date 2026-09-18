@@ -1023,63 +1023,344 @@ header{
 
 
 /* =====================================================
-   RENTAL
+   PREMIUM TRAVEL & RENTAL
 ===================================================== */
+
+
+#rental{
+    margin-top:14px;
+    background:
+        radial-gradient(circle at 0% 0%,rgba(40,116,240,.07),transparent 28%),
+        radial-gradient(circle at 100% 100%,rgba(37,211,102,.06),transparent 28%),
+        #fff;
+    padding:30px 24px 34px;
+}
+
+#rental .section-title{
+    margin-bottom:24px;
+    padding-bottom:14px;
+    border-bottom:1px solid #edf0f4;
+}
+
+#rental .section-title h2{
+    font-size:25px;
+    font-weight:800;
+    color:#172337;
+    letter-spacing:-.3px;
+}
+
+#rental .section-title h2 span{
+    color:#2874f0;
+}
 
 .rental-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px;
+    max-width:1150px;
+    margin:0 auto;
 }
 
 .rental-card{
-    border:1px solid #ddd;
+    position:relative;
     display:grid;
     grid-template-columns:45% 55%;
+    min-width:0;
     overflow:hidden;
-    border-radius:4px;
+    background:#fff;
+    border:1px solid #e3e7ed;
+    border-radius:18px !important;
+    box-shadow:0 8px 28px rgba(23,35,55,.08);
+    transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+}
+
+.rental-card:hover{
+    transform:translateY(-5px);
+    border-color:#cbd8ed;
+    box-shadow:0 16px 38px rgba(23,35,55,.13);
 }
 
 .rental-card img{
     width:100%;
     height:100%;
-    min-height:220px;
+    min-height:245px;
     object-fit:cover;
+    object-position:center;
+    background:#eef2f7;
 }
 
 .rental-info{
-    padding:20px;
+    min-width:0;
+    padding:22px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.rental-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    width:max-content;
+    max-width:100%;
+    margin-bottom:9px;
+    padding:5px 9px;
+    border-radius:999px;
+    background:#eef5ff;
+    color:#2874f0;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.35px;
+    text-transform:uppercase;
+}
+
+.rental-kicker.green{
+    background:#eafaf0;
+    color:#168b45;
 }
 
 .rental-info h3{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:0 0 13px;
+    color:#172337;
     font-size:20px;
-    margin-bottom:10px;
+    line-height:1.25;
+    font-weight:800;
+}
+
+.rental-info h3 i{
+    color:#2874f0;
+    font-size:17px;
 }
 
 .rental-info ul{
     list-style:none;
-    margin:12px 0;
+    margin:0 0 16px;
+    padding:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
 }
 
 .rental-info li{
-    font-size:12px;
-    margin:8px 0;
-    color:#555;
+    min-width:0;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    padding:8px 7px;
+    border:1px solid #edf0f4;
+    border-radius:9px;
+    background:#fafbfd;
+    color:#535e6d;
+    font-size:10px;
+    line-height:1.25;
 }
 
 .rental-info li i{
+    flex:0 0 17px;
+    width:17px;
+    text-align:center;
     color:#2874f0;
-    width:20px;
+    font-size:12px;
+}
+
+.rental-booking-note{
+    margin:0 0 12px;
+    color:#7a8491;
+    font-size:9px;
+    line-height:1.5;
 }
 
 .rental-btn{
     width:100%;
-    border:none;
-    background:#25d366;
-    color:white;
-    padding:10px;
-    font-weight:700;
-    border-radius:3px;
+    min-height:42px;
+    border:0;
+    border-radius:10px !important;
+    background:linear-gradient(135deg,#19a94b,#25d366);
+    color:#fff;
+    padding:11px 13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-family:inherit;
+    font-size:11px;
+    font-weight:800;
+    box-shadow:0 7px 16px rgba(37,211,102,.20);
+    transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+}
+
+.rental-btn:hover{
+    transform:translateY(-2px);
+    filter:saturate(1.05);
+    box-shadow:0 10px 22px rgba(37,211,102,.30);
+}
+
+.rental-btn i{
+    font-size:16px;
+}
+
+.rental-trust{
+    max-width:1150px;
+    margin:18px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px 20px;
+    color:#697483;
+    font-size:10px;
+    font-weight:600;
+}
+
+.rental-trust span{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+}
+
+.rental-trust i{
+    color:#2874f0;
+}
+
+/* Tablet */
+@media(max-width:900px){
+    #rental{
+        padding:24px 16px 28px;
+    }
+
+    .rental-grid{
+        grid-template-columns:1fr;
+        max-width:720px;
+    }
+
+    .rental-card{
+        grid-template-columns:42% 58%;
+    }
+}
+
+/* Mobile */
+@media(max-width:600px){
+    #rental{
+        padding:20px 10px 24px;
+    }
+
+    #rental .section-title{
+        margin-bottom:16px;
+        padding-bottom:11px;
+    }
+
+    #rental .section-title h2{
+        font-size:19px;
+    }
+
+    .rental-grid{
+        grid-template-columns:1fr;
+        gap:13px;
+    }
+
+    .rental-card{
+        display:flex;
+        flex-direction:column;
+        border-radius:16px !important;
+        box-shadow:0 7px 22px rgba(23,35,55,.09);
+    }
+
+    .rental-card:hover{
+        transform:none;
+    }
+
+    .rental-card img{
+        width:100%;
+        height:205px;
+        min-height:205px;
+        object-fit:cover;
+    }
+
+    .rental-info{
+        padding:15px;
+    }
+
+    .rental-kicker{
+        margin-bottom:7px;
+        padding:4px 8px;
+        font-size:8px;
+    }
+
+    .rental-info h3{
+        margin-bottom:11px;
+        font-size:18px;
+    }
+
+    .rental-info h3 i{
+        font-size:15px;
+    }
+
+    .rental-info ul{
+        gap:6px;
+        margin-bottom:12px;
+    }
+
+    .rental-info li{
+        min-height:38px;
+        padding:7px 6px;
+        font-size:9px;
+    }
+
+    .rental-info li i{
+        flex-basis:15px;
+        width:15px;
+        font-size:11px;
+    }
+
+    .rental-booking-note{
+        font-size:8px;
+        margin-bottom:10px;
+    }
+
+    .rental-btn{
+        min-height:43px;
+        padding:11px 10px;
+        font-size:11px;
+    }
+
+    .rental-trust{
+        margin-top:13px;
+        gap:6px 12px;
+        font-size:8px;
+        line-height:1.4;
+    }
+}
+
+/* Extra-small phones */
+@media(max-width:380px){
+    #rental{
+        padding-left:8px;
+        padding-right:8px;
+    }
+
+    .rental-card img{
+        height:185px;
+        min-height:185px;
+    }
+
+    .rental-info{
+        padding:13px;
+    }
+
+    .rental-info h3{
+        font-size:17px;
+    }
+
+    .rental-info li{
+        font-size:8px;
+    }
+
+    .rental-btn{
+        font-size:10px;
+    }
 }
 
 
@@ -1711,9 +1992,9 @@ class="header-btn instagram">
 
 <div class="container categories">
 
-<a href="#finance" class="category">
-<i class="fas fa-credit-card"></i>
-Credit Cards
+<a href="https://turtlemintloans.com/credit-score/customer-journey?partnerId=6a8b8be5e2376cfa64cb7a9e" class="category">
+<i class="fas fa-chart-line"></i>
+Free Cibil
 </a>
 
 <a href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz" target="_blank" rel="noopener noreferrer" class="category">
@@ -1778,7 +2059,7 @@ Rental
         <small>Apply online through Werize Partner</small>
       </div>
     </div>
-    <a class="werize-now" href="https://dukaan.werize.com/loan-saving-agent-nanded-NAVAJSHARIF-RASHID-SHAIKH-personal-loan-75Y1GayleINtQIUGakC2sz" target="_blank" rel="noopener noreferrer">
+    <a class="werize-now" href="https://turtlemintloans.com/products/personal-loan/customer/login?utm_source=DP_LINK&partnerId=6a8b8be5e2376cfa64cb7a9e">
       Check Loan Offers <i class="fas fa-arrow-right"></i>
     </a>
   </div>
@@ -2506,126 +2787,161 @@ Apply
      RENTAL
 ===================================================== -->
 
+<!-- =====================================================
+     RENTAL
+===================================================== -->
+
 <section class="section" id="rental">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
+            <h2>
+                Travel & <span>Rental</span>
+            </h2>
+        </div>
 
-<h2>
-Travel & <span>Rental</span>
-</h2>
+        <div class="rental-grid">
 
-</div>
+            <!-- AC CRUISER -->
+            <article class="rental-card">
 
+                <img
+                    src="Cluiser.jpeg"
+                    alt="AC Cruiser 14 Seater Rental"
+                    loading="lazy">
 
-<div class="rental-grid">
+                <div class="rental-info">
 
+                    <span class="rental-kicker">
+                        <i class="fas fa-star"></i>
+                        Travel Rental
+                    </span>
 
-<!-- CRUISER -->
+                    <h3>
+                        <i class="fas fa-van-shuttle"></i>
+                        AC Cruiser
+                    </h3>
 
-<div class="rental-card">
+                    <ul>
+                        <li>
+                            <i class="fas fa-users"></i>
+                            <span>14 Seater</span>
+                        </li>
 
-<img
-src="Cluiser.jpeg"
-alt="AC Cruiser Rental">
+                        <li>
+                            <i class="fas fa-snowflake"></i>
+                            <span>Full AC</span>
+                        </li>
 
-<div class="rental-info">
+                        <li>
+                            <i class="fas fa-user-tie"></i>
+                            <span>Driver Available</span>
+                        </li>
 
-<h3>AC Cruiser</h3>
+                        <li>
+                            <i class="fas fa-suitcase"></i>
+                            <span>Large Luggage</span>
+                        </li>
+                    </ul>
 
-<ul>
+                    <p class="rental-booking-note">
+                        Comfortable group travel ke liye booking aur availability WhatsApp par check karein.
+                    </p>
 
-<li>
-<i class="fas fa-users"></i>
-14 Seater
-</li>
+                    <button
+                        type="button"
+                        class="rental-btn"
+                        onclick="openWhatsApp('AC Cruiser Booking')"
+                        aria-label="Book AC Cruiser on WhatsApp">
 
-<li>
-<i class="fas fa-snowflake"></i>
-Full AC
-</li>
+                        <i class="fab fa-whatsapp"></i>
+                        Book Cruiser
+                    </button>
 
-<li>
-<i class="fas fa-user-tie"></i>
-Driver Available
-</li>
-
-<li>
-<i class="fas fa-suitcase"></i>
-Large Luggage Space
-</li>
-
-</ul>
-
-<button
-class="rental-btn"
-onclick="openWhatsApp('AC Cruiser Booking')">
-
-<i class="fab fa-whatsapp"></i>
-Book Cruiser
-
-</button>
-
-</div>
-
-</div>
-
-
-
-<!-- DOST -->
-
-<div class="rental-card">
-
-<img
-src="Ertiga.jpeg"
-alt="Ashok Leyland Dost Loading Vehicle">
-
-<div class="rental-info">
-
-<h3>Ashok Leyland Dost</h3>
-
-<ul>
-
-<li>
-<i class="fas fa-truck"></i>
-Goods / Loading Vehicle
-</li>
-
-<li>
-<i class="fas fa-boxes-stacked"></i>
-Large Loading Space
-</li>
-
-<li>
-<i class="fas fa-road"></i>
-Local Transport
-</li>
-
-<li>
-<i class="fas fa-truck-moving"></i>
-Commercial Trips
-</li>
-
-</ul>
-
-<button
-class="rental-btn"
-onclick="openWhatsApp('Ashok Leyland Dost Booking')">
-
-<i class="fab fa-whatsapp"></i>
-Book Loading Vehicle
-
-</button>
-
-</div>
-
-</div>
+                </div>
+            </article>
 
 
-</div>
+            <!-- ASHOK LEYLAND DOST -->
+            <article class="rental-card">
 
-</div>
+                <img
+                    src="Ertiga.jpeg"
+                    alt="Ashok Leyland Dost Goods Loading Vehicle Rental"
+                    loading="lazy">
+
+                <div class="rental-info">
+
+                    <span class="rental-kicker green">
+                        <i class="fas fa-truck"></i>
+                        Loading Rental
+                    </span>
+
+                    <h3>
+                        <i class="fas fa-truck-moving"></i>
+                        Ashok Leyland Dost
+                    </h3>
+
+                    <ul>
+                        <li>
+                            <i class="fas fa-boxes-stacked"></i>
+                            <span>Goods / Loading</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-box-open"></i>
+                            <span>Large Loading Space</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-road"></i>
+                            <span>Local Transport</span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-route"></i>
+                            <span>Commercial Trips</span>
+                        </li>
+                    </ul>
+
+                    <p class="rental-booking-note">
+                        Goods transport aur local loading trips ke liye WhatsApp par booking karein.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="rental-btn"
+                        onclick="openWhatsApp('Ashok Leyland Dost Booking')"
+                        aria-label="Book Ashok Leyland Dost on WhatsApp">
+
+                        <i class="fab fa-whatsapp"></i>
+                        Book Loading Vehicle
+                    </button>
+
+                </div>
+            </article>
+
+        </div>
+
+        <div class="rental-trust">
+            <span>
+                <i class="fas fa-circle-check"></i>
+                Easy WhatsApp Booking
+            </span>
+
+            <span>
+                <i class="fas fa-user-shield"></i>
+                Driver Availability
+            </span>
+
+            <span>
+                <i class="fas fa-phone"></i>
+                Quick Enquiry
+            </span>
+        </div>
+
+    </div>
 
 </section>
 
@@ -2697,11 +3013,14 @@ Business website demo by Royal Web Services
 <div class="website-demo-card">
 <div class="demo-browser-top">
 <span></span><span></span><span></span>
-<div>milegabhai.vercel.app</div>
+<div>adnanenterprice.vercel.app</div>
 </div>
 
-<a href="https://milegabhai.vercel.app/" target="_blank" rel="noopener noreferrer" class="milega-image-link">
-<img src="Screenshot (159).png" alt="Milega Bhai Website Screenshot" class="milega-screenshot">
+<a href="https://adnanenterprice.vercel.app/" target="_blank" rel="noopener noreferrer" class="demo-preview">
+<div class="demo-icon"><i class="fas fa-motorcycle"></i></div>
+<strong>ADNAN ENTERPRISE</strong>
+<small>Sewing Machine & Kanch Buttons </small>
+<span>Open Website →</span>
 </a>
 
 <div class="demo-label">
